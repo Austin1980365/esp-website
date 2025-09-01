@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://esp-website.vercel.app/sitemap.xml
