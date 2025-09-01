@@ -1,4 +1,97 @@
-import React from "react";
+import React, { useState } from "react";
+
+function FormspreeForm() {
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [error, setError] = useState("");
+
+  // Your live Formspree endpoint:
+  const FORMSPREE_URL = "https://formspree.io/f/xgvlzybo";
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus("sending");
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    // optional: add a subject
+    formData.append("_subject", "ESP Website Enquiry");
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("success");
+        e.currentTarget.reset();
+      } else {
+        setStatus("error");
+        setError(data?.errors?.[0]?.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setError("Network error. Please try again.");
+    }
+  }
+
+  return (
+    <form className="space-y-4" onSubmit={handleSubmit}>
+      {/* Honeypot (spam protection) */}
+      <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+
+      <div>
+        <label className="text-sm font-medium">Your name</label>
+        <input
+          name="name"
+          required
+          className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+          placeholder="Full name"
+        />
+      </div>
+
+      <div>
+        <label className="text-sm font-medium">Email</label>
+        <input
+          type="email"
+          name="email"
+          required
+          className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+          placeholder="you@email.com"
+        />
+      </div>
+
+      <div>
+        <label className="text-sm font-medium">Message</label>
+        <textarea
+          name="message"
+          required
+          className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-orange-400"
+          placeholder="Tell us about your event or training needs"
+        />
+      </div>
+
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="w-full rounded-xl bg-black text-white px-4 py-2 text-sm hover:bg-orange-600 disabled:opacity-70"
+      >
+        {status === "sending" ? "Sending..." : "Send"}
+      </button>
+
+      {status === "success" && (
+        <p className="text-sm text-green-600">Thanks—your message was sent. We’ll get back to you shortly.</p>
+      )}
+      {status === "error" && <p className="text-sm text-red-600">{error}</p>}
+      {status === "idle" && (
+        <p className="text-xs text-zinc-500">
+          We’ll reply from <strong>bericksse@gmail.com</strong>. Prefer WhatsApp? +27 82 785 9743
+        </p>
+      )}
+    </form>
+  );
+}import React from "react";
 import { motion } from "framer-motion";
 
 const Section = ({ id, children, className = "" }) => (
