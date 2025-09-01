@@ -49,7 +49,7 @@ const Stat = ({ value, label }) => (
 );
 
 //
-// 🚀 New Formspree-powered Contact Form
+// 🚀 Formspree-powered Contact Form
 //
 function FormspreeForm() {
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
@@ -114,7 +114,6 @@ function FormspreeForm() {
 
 //
 // === Site content ===
-//
 export default function ESP() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-zinc-50 to-white text-zinc-900">
@@ -177,7 +176,43 @@ export default function ESP() {
       <Section id="services" className="py-16 sm:py-24">
         <div className="max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-semibold text-black">Our Services</h2>
-          <p className="mt-3 text-zinc-600">From one-night events to long-term projects, we make sure you always have the right people on your team.</p>
+          <p className="mt-3 text-zinc-600">
+            We provide <strong>hospitality staffing in Johannesburg, Pretoria and across Gauteng</strong>, from
+            <strong> waiters and bar staff for events</strong> to <strong>baristas and FOH staff</strong> for restaurants,
+            hotels and sports clubs. Whether you need <strong>temporary hospitality staff in Midrand</strong> or ongoing
+            rosters in Sandton, ESP supplies reliable, well-trained people who fit right in.
+          </p>
+        </div>
+
+        <div className="mt-10 grid md:grid-cols-3 gap-6">
+          <Feature icon="users" title="Extra Hands" desc="Need help for a big night or event? We’ll match you with friendly, skilled staff who fit right in."/>
+          <Feature icon="clipboard" title="Team Management" desc="Our supervisors keep everything running smoothly, so you can relax and focus on guests."/>
+          <Feature icon="clock" title="Seasonal Support" desc="Busy season ahead? Scale up your team without losing quality service."/>
+        </div>
+      </Section>
+
+      {/* Training */}
+      <Section id="training" className="py-16 sm:py-24">
+        <div className="max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-black">Training That Works</h2>
+          <p className="mt-3 text-zinc-600">
+            Our <strong>hospitality training courses in Johannesburg and Gauteng</strong> give your team practical skills
+            they can use right away. From <strong>waiter training</strong> and <strong>barista workshops</strong> to tailored
+            <strong> FOH training in Pretoria and Midrand</strong>, ESP helps venues lift service standards quickly and consistently.
+          </p>
+        </div>
+      </Section>
+
+      {/* Clients */}
+      <Section id="clients" className="py-16 sm:py-24">
+        <div className="max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-black">Friends We’ve Helped</h2>
+          <p className="mt-3 text-zinc-600">Sports clubs, restaurants, hotels, event venues, coffee bars, caterers, stadiums and corporate canteens.</p>
+        </div>
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {["Sports Clubs","Restaurants","Hotels","Event Venues","Coffee Bars","Caterers","Stadiums","Corporate Canteens"].map((tag,i)=>(
+            <div key={i} className="rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-center text-orange-700">{tag}</div>
+          ))}
         </div>
       </Section>
 
@@ -230,4 +265,3 @@ export default function ESP() {
     </div>
   );
 }
-       
