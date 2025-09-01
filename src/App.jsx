@@ -1,97 +1,4 @@
 import React, { useState } from "react";
-
-function FormspreeForm() {
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
-  const [error, setError] = useState("");
-
-  // Your live Formspree endpoint:
-  const FORMSPREE_URL = "https://formspree.io/f/xgvlzybo";
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    setStatus("sending");
-    setError("");
-
-    const formData = new FormData(e.currentTarget);
-    // optional: add a subject
-    formData.append("_subject", "ESP Website Enquiry");
-
-    try {
-      const res = await fetch(FORMSPREE_URL, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setStatus("success");
-        e.currentTarget.reset();
-      } else {
-        setStatus("error");
-        setError(data?.errors?.[0]?.message || "Something went wrong. Please try again.");
-      }
-    } catch {
-      setStatus("error");
-      setError("Network error. Please try again.");
-    }
-  }
-
-  return (
-    <form className="space-y-4" onSubmit={handleSubmit}>
-      {/* Honeypot (spam protection) */}
-      <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-
-      <div>
-        <label className="text-sm font-medium">Your name</label>
-        <input
-          name="name"
-          required
-          className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
-          placeholder="Full name"
-        />
-      </div>
-
-      <div>
-        <label className="text-sm font-medium">Email</label>
-        <input
-          type="email"
-          name="email"
-          required
-          className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
-          placeholder="you@email.com"
-        />
-      </div>
-
-      <div>
-        <label className="text-sm font-medium">Message</label>
-        <textarea
-          name="message"
-          required
-          className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-orange-400"
-          placeholder="Tell us about your event or training needs"
-        />
-      </div>
-
-      <button
-        type="submit"
-        disabled={status === "sending"}
-        className="w-full rounded-xl bg-black text-white px-4 py-2 text-sm hover:bg-orange-600 disabled:opacity-70"
-      >
-        {status === "sending" ? "Sending..." : "Send"}
-      </button>
-
-      {status === "success" && (
-        <p className="text-sm text-green-600">Thanks—your message was sent. We’ll get back to you shortly.</p>
-      )}
-      {status === "error" && <p className="text-sm text-red-600">{error}</p>}
-      {status === "idle" && (
-        <p className="text-xs text-zinc-500">
-          We’ll reply from <strong>bericksse@gmail.com</strong>. Prefer WhatsApp? +27 82 785 9743
-        </p>
-      )}
-    </form>
-  );
-}import React from "react";
 import { motion } from "framer-motion";
 
 const Section = ({ id, children, className = "" }) => (
@@ -141,11 +48,79 @@ const Stat = ({ value, label }) => (
   </div>
 );
 
+//
+// 🚀 New Formspree-powered Contact Form
+//
+function FormspreeForm() {
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [error, setError] = useState("");
+
+  const FORMSPREE_URL = "https://formspree.io/f/xgvlzybo";
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus("sending");
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("_subject", "ESP Website Enquiry");
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("success");
+        e.currentTarget.reset();
+      } else {
+        setStatus("error");
+        setError(data?.errors?.[0]?.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setError("Network error. Please try again.");
+    }
+  }
+
+  return (
+    <form className="space-y-4" onSubmit={handleSubmit}>
+      <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+      <div>
+        <label className="text-sm font-medium">Your name</label>
+        <input name="name" required className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Full name" />
+      </div>
+      <div>
+        <label className="text-sm font-medium">Email</label>
+        <input type="email" name="email" required className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="you@email.com" />
+      </div>
+      <div>
+        <label className="text-sm font-medium">Message</label>
+        <textarea name="message" required className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Tell us about your event or training needs" />
+      </div>
+      <button type="submit" disabled={status === "sending"} className="w-full rounded-xl bg-black text-white px-4 py-2 text-sm hover:bg-orange-600 disabled:opacity-70">
+        {status === "sending" ? "Sending..." : "Send"}
+      </button>
+      {status === "success" && <p className="text-sm text-green-600">Thanks—your message was sent. We’ll get back to you shortly.</p>}
+      {status === "error" && <p className="text-sm text-red-600">{error}</p>}
+      {status === "idle" && (
+        <p className="text-xs text-zinc-500">We’ll reply from <strong>bericksse@gmail.com</strong>. Prefer WhatsApp? +27 82 785 9743</p>
+      )}
+    </form>
+  );
+}
+
+//
+// === Site content ===
+//
 export default function ESP() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-zinc-50 to-white text-zinc-900">
+      {/* Nav */}
       <nav className="sticky top-0 z-40 backdrop-blur bg-white/95 border-b border-orange-100">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+        <Section className="flex items-center justify-between py-3">
           <div className="flex items-center gap-3">
             <img src="/esp-logo-full.png" alt="ESP Logo" className="h-10 w-auto" />
             <div>
@@ -160,21 +135,26 @@ export default function ESP() {
             <a href="#contact" className="hover:text-orange-600">Contact</a>
           </div>
           <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-black text-white px-4 py-2 text-sm shadow-sm hover:bg-orange-600">Let’s Talk</a>
-        </section>
+        </Section>
       </nav>
 
+      {/* Hero */}
       <header className="relative overflow-hidden">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 grid lg:grid-cols-2 gap-10 items-center">
-          <div>
+        <Section className="py-20 sm:py-28 grid lg:grid-cols-2 gap-10 items-center">
+          <motion.div initial={{opacity:0, y:16}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700 shadow-sm">Hospitality Staffing</span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700 shadow-sm">Training</span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700 shadow-sm">South Africa</span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700 shadow-sm">Since 2007</span>
+              <Badge>Hospitality Staffing</Badge>
+              <Badge>Training</Badge>
+              <Badge>South Africa</Badge>
+              <Badge>Since 2007</Badge>
             </div>
             <img src="/esp-logo-full.png" alt="ESP Logo" className="h-16 sm:h-20 mb-6" />
-            <h1 className="text-4xl sm:text-5xl font-semibold leading-tight text-black">Hospitality staffing and training with heart.</h1>
-            <p className="mt-5 text-lg text-zinc-600 max-w-prose">At Exceptional Service Personnel (ESP), we believe kindness and skill go hand in hand. Our people bring warmth, reliability, and professionalism—so your guests feel right at home.</p>
+            <h1 className="text-4xl sm:text-5xl font-semibold leading-tight text-black">
+              Hospitality staffing and training with heart.
+            </h1>
+            <p className="mt-5 text-lg text-zinc-600 max-w-prose">
+              At Exceptional Service Personnel (ESP), we believe kindness and skill go hand in hand. Our people bring warmth, reliability, and professionalism—so your guests feel right at home.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-black text-white px-5 py-3 text-sm shadow-sm hover:bg-orange-600">Book a Chat</a>
               <a href="#services" className="inline-flex items-center gap-2 rounded-xl border border-orange-200 bg-white px-5 py-3 text-sm hover:bg-orange-50">See What We Do</a>
@@ -184,59 +164,32 @@ export default function ESP() {
               <Stat value="97%" label="Happy clients stick with us"/>
               <Stat value="48 hrs" label="Average time to find staff"/>
             </div>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div initial={{opacity:0, y:16}} animate={{opacity:1, y:0}} transition={{delay:0.1, duration:0.6}}>
             <Card className="p-6 text-center text-sm text-zinc-600">
               <p>“The right people make all the difference.”</p>
             </Card>
-          </div>
-        </section>
+          </motion.div>
+        </Section>
       </header>
 
-      <section id="services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      {/* Services */}
+      <Section id="services" className="py-16 sm:py-24">
         <div className="max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-semibold text-black">Our Services</h2>
           <p className="mt-3 text-zinc-600">From one-night events to long-term projects, we make sure you always have the right people on your team.</p>
         </div>
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
-          <Card><h3 className="font-semibold">Extra Hands</h3><p className="mt-1 text-sm text-zinc-600 leading-relaxed">Need help for a big night or event? We’ll match you with friendly, skilled staff who fit right in.</p></Card>
-          <Card><h3 className="font-semibold">Team Management</h3><p className="mt-1 text-sm text-zinc-600 leading-relaxed">Our supervisors keep everything running smoothly, so you can relax and focus on guests.</p></Card>
-          <Card><h3 className="font-semibold">Seasonal Support</h3><p className="mt-1 text-sm text-zinc-600 leading-relaxed">Busy season ahead? Scale up your team without losing quality service.</p></Card>
-        </div>
-      </section>
+      </Section>
 
-      <section id="training" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="max-w-2xl">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-black">Training That Works</h2>
-          <p className="mt-3 text-zinc-600">Quick, practical lessons your team can use right away—so service feels smooth and natural.</p>
-        </div>
-      </section>
-
-      <section id="clients" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="max-w-2xl">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-black">Friends We’ve Helped</h2>
-        </div>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {["Sports Clubs","Restaurants","Hotels","Event Venues","Coffee Bars","Caterers","Stadiums","Corporate Canteens"].map((tag,i)=>(
-            <div key={i} className="rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-center text-orange-700">{tag}</div>
-          ))}
-        </div>
-      </section>
-
-      <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      {/* Contact */}
+      <Section id="contact" className="py-16 sm:py-24">
         <div className="max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-semibold text-black">Let’s Chat</h2>
           <p className="mt-3 text-zinc-600">Tell us what you need—we’ll get back with ideas and options, no fuss.</p>
         </div>
         <div className="mt-8 grid md:grid-cols-2 gap-6">
           <Card>
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.location.href='mailto:bericksse@gmail.com?subject=ESP%20Website%20Enquiry'; }}>
-              <div><label className="text-sm font-medium">Your name</label><input className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Full name" /></div>
-              <div><label className="text-sm font-medium">Email</label><input type="email" className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="you@email.com" /></div>
-              <div><label className="text-sm font-medium">Message</label><textarea className="mt-1 w-full rounded-xl border border-orange-200 px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-orange-400" placeholder="Tell us about your event or training needs" /></div>
-              <button type="submit" className="w-full rounded-xl bg-black text-white px-4 py-2 text-sm hover:bg-orange-600">Send</button>
-              <p className="text-xs text-zinc-500">Quick: opens your email app to send to bericksse@gmail.com.</p>
-            </form>
+            <FormspreeForm />
           </Card>
           <div className="grid gap-6">
             <Card>
@@ -254,10 +207,11 @@ export default function ESP() {
             </Card>
           </div>
         </div>
-      </section>
+      </Section>
 
+      {/* Footer */}
       <footer className="border-t border-orange-100">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8 items-center">
+        <Section className="py-10 grid md:grid-cols-3 gap-8 items-center">
           <div className="space-y-2">
             <img src="/esp-logo-full.png" alt="ESP Logo" className="h-8 w-auto" />
             <p className="text-xs text-zinc-500">© {new Date().getFullYear()} Exceptional Service Personnel · EST 2007.</p>
@@ -271,8 +225,9 @@ export default function ESP() {
           <div className="md:text-right text-sm">
             <a href="#contact" className="inline-flex items-center gap-2 rounded-xl border border-orange-200 bg-white px-4 py-2 hover:bg-orange-50">Say Hello</a>
           </div>
-        </section>
+        </Section>
       </footer>
     </div>
   );
 }
+       
