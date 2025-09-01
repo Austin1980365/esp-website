@@ -203,11 +203,63 @@ export default function ESP() {
         </div>
       </Section>
 
+      {/* FAQs (new) */}
+      <Section id="faq" className="py-16 sm:py-24">
+        <div className="max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-black">FAQs</h2>
+          <p className="mt-3 text-zinc-600">Quick answers about our hospitality staffing and training in Johannesburg, Pretoria and across Gauteng.</p>
+        </div>
+
+        <div className="mt-8 grid md:grid-cols-2 gap-6">
+          <Card>
+            <h3 className="font-semibold text-black">How quickly can I hire waiters or bar staff in Johannesburg?</h3>
+            <p className="mt-2 text-sm text-zinc-600">
+              For common roles in Johannesburg, Sandton and Midrand we can often place within <strong>24–48 hours</strong>, depending on your brief and shift times.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">Do you cover Pretoria and wider Gauteng?</h3>
+            <p className="mt-2 text-sm text-zinc-600">
+              Yes — we staff events and venues across <strong>Pretoria, Midrand, Sandton and greater Gauteng</strong>, with regional projects on request.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">What hospitality roles can you supply?</h3>
+            <p className="mt-2 text-sm text-zinc-600">
+              <strong>Waiters, runners, bar staff, baristas, cashiers, FOH</strong> and <strong>event supervisors</strong>. Tell us your floor plan and we’ll recommend the right mix.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">Do you offer hospitality training in Gauteng?</h3>
+            <p className="mt-2 text-sm text-zinc-600">
+              Yes — short, practical <strong>waiter training, barista workshops and FOH training</strong> delivered on-site in Johannesburg, Pretoria and Midrand.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">Can you customise training to our menu and SOPs?</h3>
+            <p className="mt-2 text-sm text-zinc-600">
+              Absolutely. We tailor modules to your <strong>menu, service steps and SOPs</strong> and provide simple checklists your team can use on shift.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">How do I get a quote?</h3>
+            <p className="mt-2 text-sm text-zinc-600">
+              Use the form below or email <a className="underline" href="mailto:bericksse@gmail.com">bericksse@gmail.com</a>.
+              Include date, times, location (Johannesburg/Pretoria/etc.) and roles needed — we’ll reply quickly.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
       {/* Clients */}
       <Section id="clients" className="py-16 sm:py-24">
         <div className="max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-semibold text-black">Friends We’ve Helped</h2>
-          <p className="mt-3 text-zinc-600">Sports clubs, restaurants, hotels, event venues, coffee bars, caterers, stadiums and corporate canteens.</p>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {["Sports Clubs","Restaurants","Hotels","Event Venues","Coffee Bars","Caterers","Stadiums","Corporate Canteens"].map((tag,i)=>(
