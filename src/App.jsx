@@ -151,9 +151,15 @@ export default function ESP() {
             <h1 className="text-4xl sm:text-5xl font-semibold leading-tight text-black">
               Hospitality staffing and training with heart.
             </h1>
+
+            {/* UPDATED INTRO */}
             <p className="mt-5 text-lg text-zinc-600 max-w-prose">
-              At Exceptional Service Personnel (ESP), we believe kindness and skill go hand in hand. Our people bring warmth, reliability, and professionalism—so your guests feel right at home.
+              Since <strong>2007</strong>, Exceptional Service Personnel (ESP) has supplied skilled hospitality staff to
+              leading venues such as the <strong>Gallagher Convention Centre</strong>, as well as corporate canteens, sports
+              clubs, restaurants and private events across Gauteng. From waiters and bar staff to complete FOH teams, we’re
+              known for reliability, professionalism and warm, people-first service.
             </p>
+
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-black text-white px-5 py-3 text-sm shadow-sm hover:bg-orange-600">Book a Chat</a>
               <a href="#services" className="inline-flex items-center gap-2 rounded-xl border border-orange-200 bg-white px-5 py-3 text-sm hover:bg-orange-50">See What We Do</a>
@@ -163,7 +169,13 @@ export default function ESP() {
               <Stat value="97%" label="Happy clients stick with us"/>
               <Stat value="48 hrs" label="Average time to find staff"/>
             </div>
+
+            {/* trust note */}
+            <div className="mt-6">
+              <Badge>Trusted by Gallagher Convention Centre</Badge>
+            </div>
           </motion.div>
+
           <motion.div initial={{opacity:0, y:16}} animate={{opacity:1, y:0}} transition={{delay:0.1, duration:0.6}}>
             <Card className="p-6 text-center text-sm text-zinc-600">
               <p>“The right people make all the difference.”</p>
@@ -191,19 +203,61 @@ export default function ESP() {
         </div>
       </Section>
 
-      {/* Training */}
+      {/* Training — UPDATED with outlines */}
       <Section id="training" className="py-16 sm:py-24">
         <div className="max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-semibold text-black">Training That Works</h2>
           <p className="mt-3 text-zinc-600">
-            Our <strong>hospitality training courses in Johannesburg and Gauteng</strong> give your team practical skills
-            they can use right away. From <strong>waiter training</strong> and <strong>barista workshops</strong> to tailored
-            <strong> FOH training in Pretoria and Midrand</strong>, ESP helps venues lift service standards quickly and consistently.
+            Our <strong>hospitality training courses in Johannesburg, Pretoria and Gauteng</strong> are practical, modular
+            and delivered on-site. Teams learn <strong>service foundations, barista & beverage skills</strong> and
+            <strong> front-of-house management</strong> with immediate impact on guest experience.
           </p>
+        </div>
+
+        <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <Card>
+            <h3 className="font-semibold text-black">Waiter Training</h3>
+            <ul className="mt-3 text-sm text-zinc-600 space-y-1 list-disc list-inside">
+              <li>Greeting guests & menu presentation</li>
+              <li>Steps of service & table sequencing</li>
+              <li>Handling complaints with confidence</li>
+              <li>POS basics & accurate billing</li>
+            </ul>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">Barista & Beverage Skills</h3>
+            <ul className="mt-3 text-sm text-zinc-600 space-y-1 list-disc list-inside">
+              <li>Espresso extraction & milk texturing</li>
+              <li>Classic coffee menu items</li>
+              <li>Wine & beer basics for FOH</li>
+              <li>Responsible upselling & pairings</li>
+            </ul>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">Event & FOH Service</h3>
+            <ul className="mt-3 text-sm text-zinc-600 space-y-1 list-disc list-inside">
+              <li>Event set-up, service flow & breakdown</li>
+              <li>Banquet & buffet service standards</li>
+              <li>Supervising FOH teams & briefings</li>
+              <li>Recovery playbook to reduce comps</li>
+            </ul>
+          </Card>
+
+          <Card>
+            <h3 className="font-semibold text-black">Custom SOP Training</h3>
+            <ul className="mt-3 text-sm text-zinc-600 space-y-1 list-disc list-inside">
+              <li>Your menu, floor plan & service style</li>
+              <li>Shift-huddle micro-lessons (15 mins)</li>
+              <li>Visual checklists & quick-reference guides</li>
+              <li>Train-the-Trainer kits for managers</li>
+            </ul>
+          </Card>
         </div>
       </Section>
 
-      {/* FAQs (new) */}
+      {/* FAQs (kept) */}
       <Section id="faq" className="py-16 sm:py-24">
         <div className="max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-semibold text-black">FAQs</h2>
@@ -242,7 +296,7 @@ export default function ESP() {
           <Card>
             <h3 className="font-semibold text-black">Can you customise training to our menu and SOPs?</h3>
             <p className="mt-2 text-sm text-zinc-600">
-              Absolutely. We tailor modules to your <strong>menu, service steps and SOPs</strong> and provide simple checklists your team can use on shift.
+              Absolutely. We tailor modules to your <strong>menu, steps of service and SOPs</strong> and provide simple checklists your team can use on shift.
             </p>
           </Card>
 
