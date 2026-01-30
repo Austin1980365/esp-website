@@ -6,22 +6,21 @@ function Home() {
   return (
     <div className="bg-white text-gray-900 font-sans">
 
-      {/* HEADER */}
+      {/* LARGE LOGO BANNER */}
       <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
 
-          <div className="flex items-center gap-6">
-            <img
-              src="/esp-logo-full.png"
-              alt="ESP - Exceptional Service Personnel"
-              className="h-36 md:h-44 lg:h-52 w-auto"
-            />
-            <div className="text-sm text-gray-500">
-              Established 2007
-            </div>
-          </div>
+          <img
+            src="/esp-logo-full.png"
+            alt="ESP - Exceptional Service Personnel"
+            className="w-full max-w-4xl h-auto"
+          />
 
-          <nav className="hidden md:flex gap-8 text-sm font-medium">
+          <p className="mt-4 text-sm tracking-wide text-gray-500">
+            Established 2007
+          </p>
+
+          <nav className="mt-8 flex gap-10 text-sm font-medium">
             <Link to="/" className="hover:text-orange-600">Home</Link>
             <Link to="/contact" className="hover:text-orange-600">Contact</Link>
           </nav>
@@ -55,7 +54,7 @@ function Home() {
 
         <Link
           to="/contact"
-          className="inline-block bg-orange-500 text-white px-10 py-4 rounded-full font-semibold hover:bg-orange-600 transition"
+          className="inline-block bg-orange-500 text-white px-12 py-4 rounded-full font-semibold hover:bg-orange-600 transition"
         >
           Contact ESP
         </Link>
@@ -155,7 +154,7 @@ function Home() {
 
         <Link
           to="/contact"
-          className="inline-block bg-orange-500 text-white px-10 py-4 rounded-full font-semibold hover:bg-orange-600 transition"
+          className="inline-block bg-orange-500 text-white px-12 py-4 rounded-full font-semibold hover:bg-orange-600 transition"
         >
           Contact ESP
         </Link>
