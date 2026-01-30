@@ -7,15 +7,15 @@ export default function Contact() {
 
       {/* HEADER */}
       <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-12 flex items-center justify-between">
 
           <div className="flex items-center gap-6">
             <img
               src="/esp-logo-full.png"
               alt="ESP - Exceptional Service Personnel"
-              className="h-20 w-auto"
+              className="h-32 md:h-36 w-auto"
             />
-            <div className="text-xs text-gray-500">
+            <div className="text-sm text-gray-500">
               Established 2007
             </div>
           </div>
