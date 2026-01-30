@@ -139,5 +139,14 @@ export default function App() {
       </section>
 
     </div>
+  );      <section
+        id="contact"
+        className="bg-gray-900 text-white px-6 py-20 text-center"
+      >
+        ...
+      </section>
+    </div>
   );
+}
+
 }
