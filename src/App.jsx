@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from "./Contact.jsx";
@@ -132,20 +133,21 @@ function Home() {
         </div>
       </section>
 
-      {/* TRUST */}
+      {/* WHY CLIENTS TRUST US */}
       <section className="px-6 py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto">
 
           <h2 className="text-3xl font-bold mb-6">
-            Why clients trust ESP
+            Why clients trust us
           </h2>
 
           <p className="text-lg">
-            ESP is trusted to supply hospitality and event staff to
-            <strong> Gallagher Convention Centre</strong>, one of South Africa’s busiest
-            and most demanding conference and exhibition venues. This long-standing
-            relationship reflects our ability to deliver consistent service in complex,
-            high-pressure environments.
+            ESP has been supplying hospitality and event staff to
+            <strong> Gallagher Convention Centre</strong> continuously since
+            <strong> 2007</strong>. This long-standing relationship reflects our
+            ability to manage large teams, maintain service standards, and deliver
+            consistent performance over many years in one of South Africa’s busiest
+            and most demanding conference and exhibition environments.
           </p>
 
         </div>
@@ -163,18 +165,3 @@ function Home() {
         >
           Contact ESP
         </Link>
-      </section>
-
-    </div>
-  );
-}
-
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-  );
-}
-
