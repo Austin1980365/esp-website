@@ -74,12 +74,17 @@ function Home() {
             exhibition, and events industry.
           </p>
 
+          <p className="text-lg mb-6">
+            Since 2007, ESP has supplied professional hospitality and event staff to
+            some of the country’s most demanding environments, including long-term
+            service delivery at <strong>Gallagher Convention Centre</strong>.
+          </p>
+
           <p className="text-lg">
-            Since 2007, ESP has focused on supplying disciplined, well-trained
-            service teams to environments where organisation, professionalism,
-            and reliability are essential. With a staff complement of
-            <strong> 250+ trained personnel</strong>, we support both large-scale
-            events and ongoing venue operations.
+            Our teams are selected, trained, and supervised to operate in high-pressure
+            settings where organisation, professionalism, and consistency are essential.
+            With a staff complement of <strong>250+ trained personnel</strong>, ESP is
+            equipped to support both large-scale events and ongoing venue operations.
           </p>
 
         </div>
@@ -136,10 +141,10 @@ function Home() {
           </h2>
 
           <p className="text-lg">
-            ESP is trusted to supply hospitality and event staff to Gallagher
-            Convention Centre, one of South Africa’s busiest and most demanding
-            conference and exhibition venues. This long-standing relationship
-            reflects our ability to deliver consistent service in complex,
+            ESP is trusted to supply hospitality and event staff to
+            <strong> Gallagher Convention Centre</strong>, one of South Africa’s busiest
+            and most demanding conference and exhibition venues. This long-standing
+            relationship reflects our ability to deliver consistent service in complex,
             high-pressure environments.
           </p>
 
@@ -172,3 +177,4 @@ export default function App() {
     </Routes>
   );
 }
+
