@@ -7,20 +7,19 @@ export default function Contact() {
 
       {/* HEADER */}
       <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-14 flex flex-col items-center">
 
-          <div className="flex items-center gap-6">
-            <img
-              src="/esp-logo-full.png"
-              alt="ESP - Exceptional Service Personnel"
-              className="h-32 md:h-36 w-auto"
-            />
-            <div className="text-sm text-gray-500">
-              Established 2007
-            </div>
-          </div>
+          <img
+            src="/esp-logo-full.png"
+            alt="ESP - Exceptional Service Personnel"
+            className="w-full max-w-3xl h-auto"
+          />
 
-          <nav className="hidden md:flex gap-8 text-sm font-medium">
+          <p className="mt-4 text-sm tracking-wide text-gray-500">
+            Established 2007
+          </p>
+
+          <nav className="mt-6 flex gap-10 text-sm font-medium">
             <Link to="/" className="hover:text-orange-600">Home</Link>
             <Link to="/contact" className="hover:text-orange-600">Contact</Link>
           </nav>
@@ -59,7 +58,7 @@ export default function Contact() {
 
           <div className="border rounded-xl p-8 text-center">
             <h2 className="text-xl font-semibold mb-2">
-              Tebogo
+              Tebogo Mhlongo
             </h2>
             <p className="text-gray-600 mb-4">Director</p>
             <p className="mb-2">
