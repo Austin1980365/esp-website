@@ -6,21 +6,21 @@ function Home() {
   return (
     <div className="bg-white text-gray-900 font-sans">
 
-      {/* LARGE LOGO BANNER */}
+      {/* LOGO HEADER */}
       <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center">
 
           <img
             src="/esp-logo-full.png"
             alt="ESP - Exceptional Service Personnel"
-            className="w-full max-w-4xl h-auto"
+            className="w-full max-w-3xl h-auto"
           />
 
-          <p className="mt-4 text-sm tracking-wide text-gray-500">
+          <p className="mt-3 text-sm tracking-wide text-gray-500">
             Established 2007
           </p>
 
-          <nav className="mt-8 flex gap-10 text-sm font-medium">
+          <nav className="mt-6 flex gap-10 text-sm font-medium">
             <Link to="/" className="hover:text-orange-600">Home</Link>
             <Link to="/contact" className="hover:text-orange-600">Contact</Link>
           </nav>
@@ -29,7 +29,7 @@ function Home() {
       </header>
 
       {/* HERO */}
-      <section className="px-6 py-24 text-center max-w-5xl mx-auto">
+      <section className="px-6 py-20 text-center max-w-5xl mx-auto">
 
         <p className="text-sm font-semibold text-gray-600 mb-4">
           Long-standing service delivery at Gallagher Convention Centre
@@ -51,106 +51,6 @@ function Home() {
           • 250+ trained staff <br />
           • Proven reliability in high-pressure environments
         </div>
-
-        <Link
-          to="/contact"
-          className="inline-block bg-orange-500 text-white px-12 py-4 rounded-full font-semibold hover:bg-orange-600 transition"
-        >
-          Contact ESP
-        </Link>
-      </section>
-
-      {/* WHO WE ARE */}
-      <section className="px-6 py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-
-          <h2 className="text-3xl font-bold mb-6">
-            Who we are
-          </h2>
-
-          <p className="text-lg mb-6">
-            Exceptional Service Personnel is a long-standing hospitality staffing
-            and training company with deep roots in South Africa’s conferencing,
-            exhibition, and events industry.
-          </p>
-
-          <p className="text-lg">
-            Since 2007, ESP has focused on supplying disciplined, well-trained
-            service teams to environments where organisation, professionalism,
-            and reliability are essential. With a staff complement of
-            <strong> 250+ trained personnel</strong>, we support both large-scale
-            events and ongoing venue operations.
-          </p>
-
-        </div>
-      </section>
-
-      {/* WHAT WE DO */}
-      <section className="px-6 py-24">
-        <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            What we do
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-12">
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4">
-                Hospitality & Event Staffing
-              </h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Ushers & front-of-house support</li>
-                <li>Setup & breakdown crews</li>
-                <li>Food service assistants</li>
-                <li>Cashiers & registration staff</li>
-                <li>Professional waiters & bar staff</li>
-                <li>Bar management & beverage service</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4">
-                Training & Upskilling
-              </h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Front-of-house professionalism</li>
-                <li>Service standards & discipline</li>
-                <li>Guest interaction & service awareness</li>
-                <li>Operational readiness under pressure</li>
-                <li>Upskilling existing venue staff</li>
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* TRUST */}
-      <section className="px-6 py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-
-          <h2 className="text-3xl font-bold mb-6">
-            Why clients trust ESP
-          </h2>
-
-          <p className="text-lg">
-            ESP is trusted to supply hospitality and event staff to Gallagher
-            Convention Centre, one of South Africa’s busiest and most demanding
-            conference and exhibition venues. This long-standing relationship
-            reflects our ability to deliver consistent service in complex,
-            high-pressure environments.
-          </p>
-
-        </div>
-      </section>
-
-      {/* FOOTER CTA */}
-      <section className="bg-gray-900 text-white px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold mb-6">
-          Speak to ESP directly
-        </h2>
 
         <Link
           to="/contact"
