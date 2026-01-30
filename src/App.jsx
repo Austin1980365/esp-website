@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function App() {
   return (
     <div className="bg-white text-gray-900 font-sans">
@@ -58,7 +60,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* WAITERS PAGE SECTION */}
+      {/* WAITERS */}
       <section id="waiters" className="px-6 py-20 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-6">
           Professional Event Waiters in Gauteng
@@ -95,7 +97,7 @@ export default function App() {
           <li>Well-groomed and presentable</li>
           <li>Confident guest interaction</li>
           <li>Reliable, punctual, and supervised</li>
-          <li>Focused on guest experience, not just service</li>
+          <li>Focused on guest experience</li>
         </ul>
 
         <h3 className="text-2xl font-semibold mt-10 mb-4">
@@ -104,7 +106,7 @@ export default function App() {
         <p className="mb-6">
           ESP has supplied hospitality staff to events and venues across Gauteng for over
           15 years, including long-standing service delivery at Gallagher Convention
-          Centre — one of South Africa’s busiest conference and exhibition venues.
+          Centre.
         </p>
 
         <a
