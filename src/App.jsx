@@ -70,4 +70,73 @@ export default function App() {
               </p>
             </div>
 
-            <div
+            <div className="bg-white p-8 rounded-xl shadow">
+              <h3 className="text-xl font-semibold mb-4">Skilled Bar Staff</h3>
+              <p>
+                Professional bar staff for high-volume events and hospitality venues,
+                trained to perform under pressure.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow">
+              <h3 className="text-xl font-semibold mb-4">Hospitality Training</h3>
+              <p>
+                Practical front-of-house service training focused on professionalism,
+                guest interaction, and service standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WAITERS */}
+      <section id="waiters" className="px-6 py-20 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6">
+          Professional Event Waiters in Gauteng
+        </h2>
+
+        <p className="mb-6">
+          ESP supplies experienced, hospitality-trained waiters for events, conferences,
+          exhibitions, and venues across Johannesburg, Pretoria, Midrand, and Centurion.
+        </p>
+
+        <p className="mb-6">
+          With over 15 years of experience, ESP is trusted to deliver polished,
+          well-groomed, and reliable service staff for demanding hospitality environments,
+          including long-standing service delivery at major convention and exhibition
+          venues.
+        </p>
+
+        <a
+          href="#contact"
+          className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition"
+        >
+          Book Professional Waiters
+        </a>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="bg-gray-900 text-white px-6 py-20 text-center"
+      >
+        <h2 className="text-3xl font-bold mb-6">
+          Book Professional Hospitality Staff
+        </h2>
+        <p className="max-w-2xl mx-auto mb-8">
+          Contact ESP to discuss your hospitality staffing or training requirements
+          anywhere in Gauteng.
+        </p>
+
+        <a
+          href="mailto:bericksse@gmail.com"
+          className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition"
+        >
+          Contact ESP
+        </a>
+      </section>
+
+    </div>
+  );
+}
+
