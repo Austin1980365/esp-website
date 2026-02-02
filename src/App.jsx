@@ -1,4 +1,4 @@
-
+import Waiters from "./pages/Waiters.jsx";
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from "./Contact.jsx";
