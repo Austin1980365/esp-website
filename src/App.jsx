@@ -1,7 +1,7 @@
-import Waiters from "./pages/Waiters.jsx";
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from "./Contact.jsx";
+import Waiters from "./pages/Waiters.jsx";
 
 function Home() {
   return (
@@ -23,6 +23,7 @@ function Home() {
 
           <nav className="mt-6 flex gap-10 text-sm font-medium">
             <Link to="/" className="hover:text-orange-600">Home</Link>
+            <Link to="/waiters" className="hover:text-orange-600">Waiters</Link>
             <Link to="/contact" className="hover:text-orange-600">Contact</Link>
           </nav>
 
@@ -165,3 +166,18 @@ function Home() {
         >
           Contact ESP
         </Link>
+      </section>
+
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/waiters" element={<Waiters />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  );
+}
