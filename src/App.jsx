@@ -10,15 +10,15 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[124px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
-        {/* ESP LOGO - LARGE */}
+        {/* ESP LOGO */}
         <Link
           to="/"
-          className="relative flex h-[124px] w-[270px] items-center overflow-visible"
+          className="relative flex h-full w-[330px] items-center overflow-visible"
         >
           <img
             src="/esp%20logo%203%20modern.png"
             alt="ESP Exceptional Service Personnel"
-            className="absolute left-0 top-1/2 h-[140px] w-[140px] -translate-y-1/2 scale-[1.25] origin-left object-contain"
+            className="absolute left-[-15px] top-1/2 h-[230px] w-[230px] -translate-y-1/2 object-contain"
           />
         </Link>
 
@@ -69,7 +69,7 @@ function Header() {
 
         </nav>
 
-        {/* MOBILE BUTTON */}
+        {/* MOBILE CONTACT */}
         <Link
           to="/contact"
           className="rounded-full bg-[#f28c28] px-5 py-3 text-sm font-bold text-white lg:hidden"
@@ -103,11 +103,11 @@ function Footer() {
               <img
                 src="/esp%20logo%203%20modern.png"
                 alt="ESP Exceptional Service Personnel"
-                className="h-[135px] w-[135px] object-contain"
+                className="h-[170px] w-[170px] object-contain"
               />
             </Link>
 
-            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+            <p className="mt-4 max-w-sm text-sm leading-7 text-slate-400">
               Professional hospitality staffing, practical training and
               customer experience solutions built around exceptional service.
             </p>
@@ -224,9 +224,7 @@ function Home() {
 
       <main>
 
-        {/* =================================================
-            HERO
-        ================================================= */}
+        {/* HERO */}
 
         <section className="relative min-h-[680px] overflow-hidden bg-[#020817]">
 
@@ -305,9 +303,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            TRUST BAR
-        ================================================= */}
+        {/* TRUST BAR */}
 
         <section className="border-b border-slate-200 bg-white">
 
@@ -337,9 +333,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            INTRO
-        ================================================= */}
+        {/* INTRODUCTION */}
 
         <section className="bg-white py-24">
 
@@ -398,9 +392,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            SERVICES
-        ================================================= */}
+        {/* SERVICES */}
 
         <section className="bg-slate-50 py-24">
 
@@ -453,9 +445,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            FINAL CTA
-        ================================================= */}
+        {/* FINAL CTA */}
 
         <section className="bg-[#020817] py-24">
 
@@ -502,7 +492,10 @@ function Home() {
    TRUST ITEM
 ========================================================= */
 
-function TrustItem({ number, label }) {
+function TrustItem({
+  number,
+  label,
+}) {
   return (
     <div className="px-5 py-8 text-center sm:px-8">
 
@@ -546,7 +539,7 @@ function ServiceCard({
         {text}
       </p>
 
-      <div className="mt-8 font-bold text-[#020817] group-hover:text-[#f28c28]">
+      <div className="mt-8 font-bold text-[#020817] transition group-hover:text-[#f28c28]">
         Learn More →
       </div>
 
@@ -1141,10 +1134,13 @@ function Contact() {
 }
 
 /* =========================================================
-   COMPONENTS
+   FEATURE CARD
 ========================================================= */
 
-function FeatureCard({ title, text }) {
+function FeatureCard({
+  title,
+  text,
+}) {
   return (
     <div className="border border-slate-200 bg-white p-8">
 
@@ -1162,7 +1158,14 @@ function FeatureCard({ title, text }) {
   );
 }
 
-function TrainingItem({ title, text }) {
+/* =========================================================
+   TRAINING ITEM
+========================================================= */
+
+function TrainingItem({
+  title,
+  text,
+}) {
   return (
     <div className="border-l-4 border-[#f28c28] bg-slate-50 p-6">
 
@@ -1178,7 +1181,15 @@ function TrainingItem({ title, text }) {
   );
 }
 
-function ExperienceCard({ number, title, text }) {
+/* =========================================================
+   EXPERIENCE CARD
+========================================================= */
+
+function ExperienceCard({
+  number,
+  title,
+  text,
+}) {
   return (
     <div className="border border-slate-200 bg-white p-8">
 
@@ -1198,7 +1209,14 @@ function ExperienceCard({ number, title, text }) {
   );
 }
 
-function ValueCard({ title, text }) {
+/* =========================================================
+   VALUE CARD
+========================================================= */
+
+function ValueCard({
+  title,
+  text,
+}) {
   return (
     <div className="bg-white p-8">
 
@@ -1216,7 +1234,14 @@ function ValueCard({ title, text }) {
   );
 }
 
-function FAQItem({ question, answer }) {
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+function FAQItem({
+  question,
+  answer,
+}) {
   return (
     <div className="border border-slate-200 p-7">
 
@@ -1232,7 +1257,15 @@ function FAQItem({ question, answer }) {
   );
 }
 
-function FormField({ label, type, placeholder }) {
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+function FormField({
+  label,
+  type,
+  placeholder,
+}) {
   return (
     <div>
 
@@ -1249,6 +1282,10 @@ function FormField({ label, type, placeholder }) {
     </div>
   );
 }
+
+/* =========================================================
+   CTA
+========================================================= */
 
 function CTA({
   title,
@@ -1269,7 +1306,9 @@ function CTA({
 
         <h2
           className={`text-4xl font-black ${
-            dark ? "text-white" : "text-[#020817]"
+            dark
+              ? "text-white"
+              : "text-[#020817]"
           }`}
         >
           {title}
@@ -1277,7 +1316,9 @@ function CTA({
 
         <p
           className={`mt-6 text-lg leading-8 ${
-            dark ? "text-slate-400" : "text-slate-600"
+            dark
+              ? "text-slate-400"
+              : "text-slate-600"
           }`}
         >
           {text}
