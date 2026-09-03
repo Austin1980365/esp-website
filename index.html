@@ -6,27 +6,92 @@
 
     <title>Waiters for Hire in Gauteng | Hospitality Staffing & Customer Experience | ESP</title>
 
-    <meta id="meta-description" name="description" content="ESP provides professional waiters, barmen, event hospitality staff, practical service training and customer experience solutions across Gauteng. Established in 2007." />
-    <meta name="keywords" content="waiters for hire Gauteng, waiters for hire Johannesburg, event staff Gauteng, hospitality staffing Gauteng, bartenders for hire, hospitality training, customer service training, customer experience consulting" />
+    <meta
+      name="description"
+      content="ESP provides professional waiters, barmen, event hospitality staff, practical service training and customer experience solutions across Gauteng. Established in 2007."
+    />
+    <meta
+      name="keywords"
+      content="waiters for hire Gauteng, waiters for hire Johannesburg, event staff Gauteng, hospitality staffing Gauteng, bartenders for hire, hospitality training, customer service training, customer experience consulting"
+    />
     <meta name="author" content="ESP - Exceptional Service Personnel" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0b1f3a" />
 
-    <link id="canonical-link" rel="canonical" href="https://www.espstaffing.co.za/" />
+    <link rel="canonical" href="https://www.espstaffing.co.za/" />
     <link rel="icon" type="image/png" href="/esp%20logo%203%20modern.png" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ESP - Exceptional Service Personnel" />
-    <meta id="og-title" property="og:title" content="Waiters for Hire in Gauteng | ESP" />
-    <meta id="og-description" property="og:description" content="Professional hospitality staffing, practical training and customer experience solutions across Gauteng. Established in 2007." />
-    <meta id="og-url" property="og:url" content="https://www.espstaffing.co.za/" />
+    <meta property="og:title" content="Waiters for Hire in Gauteng | ESP" />
+    <meta
+      property="og:description"
+      content="Professional hospitality staffing, practical training and customer experience solutions across Gauteng. Established in 2007."
+    />
+    <meta property="og:url" content="https://www.espstaffing.co.za/" />
     <meta property="og:image" content="https://www.espstaffing.co.za/esp%20logo%203%20modern.png" />
     <meta property="og:image:alt" content="ESP Exceptional Service Personnel" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta id="twitter-title" name="twitter:title" content="Waiters for Hire in Gauteng | ESP" />
-    <meta id="twitter-description" name="twitter:description" content="Professional hospitality staffing, training and customer experience solutions across Gauteng." />
+    <meta name="twitter:title" content="Waiters for Hire in Gauteng | ESP" />
+    <meta
+      name="twitter:description"
+      content="Professional hospitality staffing, training and customer experience solutions across Gauteng."
+    />
     <meta name="twitter:image" content="https://www.espstaffing.co.za/esp%20logo%203%20modern.png" />
+
+    <script>
+      (function () {
+        const pages = {
+          "/": {
+            title: "Waiters for Hire in Gauteng | Hospitality Staffing & Customer Experience | ESP",
+            description: "ESP provides professional waiters, barmen, event hospitality staff, practical service training and customer experience solutions across Gauteng. Established in 2007."
+          },
+          "/staffing": {
+            title: "Hospitality Staffing Gauteng | Waiters, Barmen & Event Staff | ESP",
+            description: "Professional waiters, barmen and event hospitality staff for restaurants, functions, venues and customer-facing operations across Gauteng."
+          },
+          "/training": {
+            title: "Hospitality & Customer Service Training Gauteng | ESP",
+            description: "Practical hospitality and customer service training to improve service standards, staff confidence, professionalism and customer experience across Gauteng."
+          },
+          "/customer-experience": {
+            title: "Customer Experience Solutions Gauteng | ESP",
+            description: "Customer experience solutions that help businesses identify service gaps, strengthen teams and deliver more consistent five-star service."
+          },
+          "/about": {
+            title: "About ESP | Hospitality Staffing & Service Excellence Since 2007",
+            description: "Learn about ESP, established in 2007 and focused on hospitality staffing, practical training and customer experience solutions across Gauteng."
+          },
+          "/faq": {
+            title: "ESP FAQ | Hospitality Staffing, Training & Customer Experience",
+            description: "Answers to common questions about ESP hospitality staffing, trained personnel, service training and customer experience solutions across Gauteng."
+          },
+          "/contact": {
+            title: "Contact ESP | Hospitality Staffing & Training Gauteng",
+            description: "Contact ESP for hospitality staffing, service training and customer experience solutions for businesses and events across Gauteng."
+          }
+        };
+
+        const page = pages[window.location.pathname] || pages["/"];
+        const canonicalUrl = "https://www.espstaffing.co.za" + (window.location.pathname === "/" ? "/" : window.location.pathname);
+
+        document.title = page.title;
+
+        const setMeta = (selector, attribute, value) => {
+          const element = document.querySelector(selector);
+          if (element) element.setAttribute(attribute, value);
+        };
+
+        setMeta('meta[name="description"]', "content", page.description);
+        setMeta('meta[property="og:title"]', "content", page.title);
+        setMeta('meta[property="og:description"]', "content", page.description);
+        setMeta('meta[property="og:url"]', "content", canonicalUrl);
+        setMeta('meta[name="twitter:title"]', "content", page.title);
+        setMeta('meta[name="twitter:description"]', "content", page.description);
+        setMeta('link[rel="canonical"]', "href", canonicalUrl);
+      })();
+    </script>
 
     <script type="application/ld+json">
       {
@@ -38,74 +103,30 @@
         "logo": "https://www.espstaffing.co.za/esp%20logo%203%20modern.png",
         "email": "bericksse@gmail.com",
         "contactPoint": [
-          { "@type": "ContactPoint", "telephone": "+27 82 785 9743", "contactType": "customer service", "areaServed": "ZA" },
-          { "@type": "ContactPoint", "telephone": "+27 83 305 5303", "contactType": "customer service", "areaServed": "ZA" }
-        ],
-        "address": { "@type": "PostalAddress", "streetAddress": "19 Richards Drive", "addressLocality": "Midrand", "addressCountry": "ZA" },
-        "areaServed": { "@type": "AdministrativeArea", "name": "Gauteng" }
-      }
-    </script>
-
-    <script>
-      (function () {
-        const pages = {
-          "/": {
-            title: "Waiters for Hire in Gauteng | Hospitality Staffing & Customer Experience | ESP",
-            description: "ESP provides professional waiters, barmen, event hospitality staff, practical service training and customer experience solutions across Gauteng. Established in 2007."
+          {
+            "@type": "ContactPoint",
+            "telephone": "+27 82 785 9743",
+            "contactType": "customer service",
+            "areaServed": "ZA"
           },
-          "/staffing": {
-            title: "Hospitality Staffing Gauteng | Waiters, Barmen & Event Staff | ESP",
-            description: "Professional waiters, barmen and event hospitality personnel for restaurants, functions, venues and customer-facing operations across Gauteng."
-          },
-          "/training": {
-            title: "Hospitality & Customer Service Training Gauteng | ESP",
-            description: "Practical hospitality and customer service training designed to improve service standards, confidence, professionalism and consistency."
-          },
-          "/customer-experience": {
-            title: "Customer Experience Solutions Gauteng | ESP",
-            description: "Improve your customer journey, service standards and team performance with practical customer experience solutions from ESP."
-          },
-          "/about": {
-            title: "About ESP | Hospitality Staffing & Service Excellence Since 2007",
-            description: "Learn about ESP, established in 2007 and focused on hospitality staffing, practical training and five-star customer experience across Gauteng."
-          },
-          "/faq": {
-            title: "ESP FAQ | Hospitality Staffing, Training & Customer Experience",
-            description: "Answers to common questions about ESP hospitality staffing, training, customer experience solutions, service area and experience."
-          },
-          "/contact": {
-            title: "Contact ESP | Hospitality Staffing & Training Gauteng",
-            description: "Contact the ESP team about hospitality staffing, staff training or customer experience solutions for your business or event in Gauteng."
+          {
+            "@type": "ContactPoint",
+            "telephone": "+27 83 305 5303",
+            "contactType": "customer service",
+            "areaServed": "ZA"
           }
-        };
-
-        const path = window.location.pathname.replace(/\/$/, "") || "/";
-        const page = pages[path] || pages["/"];
-        const url = "https://www.espstaffing.co.za" + (path === "/" ? "/" : path);
-
-        document.title = page.title;
-        document.getElementById("meta-description").setAttribute("content", page.description);
-        document.getElementById("canonical-link").setAttribute("href", url);
-        document.getElementById("og-title").setAttribute("content", page.title);
-        document.getElementById("og-description").setAttribute("content", page.description);
-        document.getElementById("og-url").setAttribute("content", url);
-        document.getElementById("twitter-title").setAttribute("content", page.title);
-        document.getElementById("twitter-description").setAttribute("content", page.description);
-
-        window.addEventListener("popstate", function () {
-          const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
-          const currentPage = pages[currentPath] || pages["/"];
-          const currentUrl = "https://www.espstaffing.co.za" + (currentPath === "/" ? "/" : currentPath);
-          document.title = currentPage.title;
-          document.getElementById("meta-description").setAttribute("content", currentPage.description);
-          document.getElementById("canonical-link").setAttribute("href", currentUrl);
-          document.getElementById("og-title").setAttribute("content", currentPage.title);
-          document.getElementById("og-description").setAttribute("content", currentPage.description);
-          document.getElementById("og-url").setAttribute("content", currentUrl);
-          document.getElementById("twitter-title").setAttribute("content", currentPage.title);
-          document.getElementById("twitter-description").setAttribute("content", currentPage.description);
-        });
-      })();
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19 Richards Drive",
+          "addressLocality": "Midrand",
+          "addressCountry": "ZA"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Gauteng"
+        }
+      }
     </script>
   </head>
 
