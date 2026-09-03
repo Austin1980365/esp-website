@@ -10,23 +10,27 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[92px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
-        {/* MODERN LOGO */}
+        {/* ESP MODERN LOGO */}
         <Link to="/" className="flex items-center">
           <img
-            src="/esp-logo-modern.png"
+            src="/ESP%20logo2.png"
             alt="ESP Exceptional Service Personnel"
-            className="h-[78px] w-[190px] object-contain object-left"
+            className="h-[82px] w-[205px] object-contain object-left"
           />
         </Link>
 
         {/* DESKTOP NAVIGATION */}
         <nav className="hidden items-center gap-8 lg:flex">
           <NavLink to="/staffing">Staffing</NavLink>
+
           <NavLink to="/training">Training</NavLink>
+
           <NavLink to="/customer-experience">
             Customer Experience
           </NavLink>
+
           <NavLink to="/about">About</NavLink>
+
           <NavLink to="/faq">FAQ</NavLink>
 
           <Link
@@ -44,6 +48,7 @@ function Header() {
         >
           Contact
         </Link>
+
       </div>
     </header>
   );
@@ -60,36 +65,45 @@ function NavLink({ to, children }) {
   );
 }
 
+/* =========================================================
+   FOOTER
+========================================================= */
+
 function Footer() {
   return (
     <footer className="bg-[#020817] text-white">
+
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
-          {/* FOOTER BRAND */}
+          {/* BRAND */}
           <div>
-            <div className="mb-5">
-              <img
-                src="/esp-logo-modern.png"
-                alt="ESP Exceptional Service Personnel"
-                className="h-[82px] w-[200px] object-contain object-left"
-              />
-            </div>
 
-            <p className="max-w-sm text-sm leading-7 text-slate-400">
+            <Link to="/" className="inline-block">
+              <img
+                src="/ESP%20logo2.png"
+                alt="ESP Exceptional Service Personnel"
+                className="h-[90px] w-[220px] object-contain object-left"
+              />
+            </Link>
+
+            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
               Professional hospitality staffing, practical training and
               customer experience solutions built around exceptional service.
             </p>
+
           </div>
 
           {/* SERVICES */}
           <div>
+
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Services
             </h3>
 
             <div className="space-y-3 text-sm text-slate-400">
+
               <Link
                 to="/staffing"
                 className="block transition hover:text-white"
@@ -110,16 +124,20 @@ function Footer() {
               >
                 Customer Experience
               </Link>
+
             </div>
+
           </div>
 
           {/* COMPANY */}
           <div>
+
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Company
             </h3>
 
             <div className="space-y-3 text-sm text-slate-400">
+
               <Link
                 to="/about"
                 className="block transition hover:text-white"
@@ -140,11 +158,14 @@ function Footer() {
               >
                 Contact
               </Link>
+
             </div>
+
           </div>
 
           {/* SERVICE AREA */}
           <div>
+
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Service Area
             </h3>
@@ -160,24 +181,26 @@ function Footer() {
               <br />
               Greater Gauteng
             </p>
+
           </div>
 
         </div>
 
         <div className="mt-14 border-t border-slate-800 pt-8 text-sm text-slate-500">
           <p>
-            © {new Date().getFullYear()} Exceptional Service Personnel. All
-            rights reserved.
+            © {new Date().getFullYear()} Exceptional Service Personnel.
+            All rights reserved.
           </p>
         </div>
 
       </div>
+
     </footer>
   );
 }
 
 /* =========================================================
-   HOME PAGE
+   HOME
 ========================================================= */
 
 function Home() {
@@ -193,7 +216,7 @@ function Home() {
 
         <section className="relative min-h-[680px] overflow-hidden bg-[#020817]">
 
-          {/* HERO PHOTOGRAPH */}
+          {/* HERO PHOTO */}
           <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
 
             <img
@@ -202,7 +225,7 @@ function Home() {
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
-            {/* LIGHT PHOTO BLEND */}
+            {/* SUBTLE NAVY BLEND */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/90 via-[#020817]/35 via-25% to-transparent" />
 
           </div>
@@ -217,7 +240,7 @@ function Home() {
                 Five-Star Customer Experience
               </div>
 
-              {/* HEADLINE */}
+              {/* MAIN HEADLINE */}
               <h1 className="text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
 
                 Exceptional
@@ -226,7 +249,7 @@ function Home() {
                   Service
                 </span>
 
-                <span className="mt-3 block text-white">
+                <span className="mt-3 block">
                   Starts With
                 </span>
 
@@ -240,14 +263,14 @@ function Home() {
 
               </h1>
 
-              {/* INTRO */}
+              {/* DESCRIPTION */}
               <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
                 Professional hospitality staffing, practical training and
                 customer experience solutions for businesses and events
                 across Gauteng.
               </p>
 
-              {/* BUTTONS */}
+              {/* CTA BUTTONS */}
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
 
                 <Link
@@ -324,11 +347,13 @@ function Home() {
                 </p>
 
                 <h2 className="text-4xl font-black tracking-tight text-[#020817] sm:text-5xl">
+
                   Service is not just what your customers receive.
 
                   <span className="block text-[#f28c28]">
                     It is how they remember you.
                   </span>
+
                 </h2>
 
               </div>
@@ -353,9 +378,11 @@ function Home() {
                   className="mt-8 inline-flex items-center font-bold text-[#020817] transition hover:text-[#f28c28]"
                 >
                   Explore Customer Experience
+
                   <span className="ml-3 text-[#f28c28]">
                     →
                   </span>
+
                 </Link>
 
               </div>
@@ -422,7 +449,7 @@ function Home() {
         </section>
 
         {/* =================================================
-            CTA
+            FINAL CTA
         ================================================= */}
 
         <section className="bg-[#020817] py-24">
@@ -453,9 +480,11 @@ function Home() {
               className="mt-9 inline-flex rounded-full bg-[#f28c28] px-8 py-4 text-sm font-bold text-white transition hover:bg-[#d97516]"
             >
               Get in Touch
+
               <span className="ml-3">
                 →
               </span>
+
             </Link>
 
           </div>
@@ -540,101 +569,95 @@ function Staffing() {
         text="Professional hospitality personnel who understand that great service is about more than completing a task."
       />
 
-      <StaffingContent />
+      <main>
+
+        <section className="bg-white py-24">
+
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+            <div className="grid gap-16 lg:grid-cols-2">
+
+              <div>
+
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
+                  Professional Personnel
+                </p>
+
+                <h2 className="mt-4 text-4xl font-black text-[#020817]">
+                  Reliable people. Professional standards.
+                </h2>
+
+              </div>
+
+              <div className="text-lg leading-8 text-slate-600">
+
+                <p>
+                  ESP provides professional hospitality personnel for
+                  customer-facing environments where presentation,
+                  reliability and service matter.
+                </p>
+
+                <p className="mt-6">
+                  Our personnel can support restaurants, private functions,
+                  corporate events, venues and other hospitality operations
+                  across Gauteng.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="mt-16 grid gap-6 md:grid-cols-3">
+
+              <FeatureCard
+                title="Waiters"
+                text="Professional front-of-house personnel focused on attentive and efficient guest service."
+              />
+
+              <FeatureCard
+                title="Bartenders"
+                text="Confident, professional bar staff who understand service, presentation and guest interaction."
+              />
+
+              <FeatureCard
+                title="Event Staff"
+                text="Flexible hospitality personnel for functions, events and customer-facing requirements."
+              />
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section className="bg-slate-50 py-24">
+
+          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+
+            <h2 className="text-4xl font-black text-[#020817]">
+              Need hospitality staff?
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              Tell us about your requirements and we'll discuss how ESP can
+              support your operation or event.
+            </p>
+
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
+            >
+              Request Staff →
+            </Link>
+
+          </div>
+
+        </section>
+
+      </main>
 
       <Footer />
     </>
-  );
-}
-
-function StaffingContent() {
-  return (
-    <main>
-
-      <section className="bg-white py-24">
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
-          <div className="grid gap-16 lg:grid-cols-2">
-
-            <div>
-
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
-                Professional Personnel
-              </p>
-
-              <h2 className="mt-4 text-4xl font-black text-[#020817]">
-                Reliable people. Professional standards.
-              </h2>
-
-            </div>
-
-            <div className="text-lg leading-8 text-slate-600">
-
-              <p>
-                ESP provides professional hospitality personnel for
-                customer-facing environments where presentation, reliability
-                and service matter.
-              </p>
-
-              <p className="mt-6">
-                Our personnel can support restaurants, private functions,
-                corporate events, venues and other hospitality operations
-                across Gauteng.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-
-            <FeatureCard
-              title="Waiters"
-              text="Professional front-of-house personnel focused on attentive and efficient guest service."
-            />
-
-            <FeatureCard
-              title="Bartenders"
-              text="Confident, professional bar staff who understand service, presentation and guest interaction."
-            />
-
-            <FeatureCard
-              title="Event Staff"
-              text="Flexible hospitality personnel for functions, events and customer-facing requirements."
-            />
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <section className="bg-slate-50 py-24">
-
-        <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-
-          <h2 className="text-4xl font-black text-[#020817]">
-            Need hospitality staff?
-          </h2>
-
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            Tell us about your requirements and we'll discuss how ESP can
-            support your operation or event.
-          </p>
-
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
-          >
-            Request Staff →
-          </Link>
-
-        </div>
-
-      </section>
-
-    </main>
   );
 }
 
@@ -675,7 +698,7 @@ function Training() {
       <PageHero
         eyebrow="Training"
         title="Build a team that understands exceptional service."
-        text="Practical, customer-service training designed to improve confidence, consistency and the guest experience."
+        text="Practical customer-service training designed to improve confidence, consistency and the guest experience."
       />
 
       <main>
@@ -1139,7 +1162,7 @@ function Contact() {
 
           <div className="grid gap-16 lg:grid-cols-2">
 
-            {/* CONTACT INTRO */}
+            {/* CONTACT INFORMATION */}
             <div>
 
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
@@ -1171,7 +1194,7 @@ function Contact() {
 
             </div>
 
-            {/* CONTACT FORM */}
+            {/* FORM */}
             <form
               className="border border-slate-200 bg-slate-50 p-8"
               onSubmit={(e) => e.preventDefault()}
