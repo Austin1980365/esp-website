@@ -10,19 +10,25 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[124px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
-        {/* ESP LOGO */}
+        {/* =================================================
+            LARGE ESP LOGO
+        ================================================= */}
+
         <Link
           to="/"
-          className="relative flex h-full w-[330px] items-center overflow-visible"
+          className="relative flex h-[124px] w-[360px] shrink-0 items-center overflow-visible"
         >
           <img
             src="/esp%20logo%203%20modern.png"
             alt="ESP Exceptional Service Personnel"
-            className="absolute left-[-15px] top-1/2 h-[230px] w-[230px] -translate-y-1/2 object-contain"
+            className="absolute left-[-45px] top-1/2 h-[360px] w-[360px] -translate-y-1/2 object-contain"
           />
         </Link>
 
-        {/* DESKTOP NAV */}
+        {/* =================================================
+            DESKTOP NAVIGATION
+        ================================================= */}
+
         <nav className="hidden items-center gap-8 lg:flex">
 
           <Link
@@ -69,7 +75,10 @@ function Header() {
 
         </nav>
 
-        {/* MOBILE CONTACT */}
+        {/* =================================================
+            MOBILE CONTACT
+        ================================================= */}
+
         <Link
           to="/contact"
           className="rounded-full bg-[#f28c28] px-5 py-3 text-sm font-bold text-white lg:hidden"
@@ -103,7 +112,7 @@ function Footer() {
               <img
                 src="/esp%20logo%203%20modern.png"
                 alt="ESP Exceptional Service Personnel"
-                className="h-[170px] w-[170px] object-contain"
+                className="h-[190px] w-[190px] object-contain"
               />
             </Link>
 
@@ -224,7 +233,9 @@ function Home() {
 
       <main>
 
-        {/* HERO */}
+        {/* =================================================
+            HERO
+        ================================================= */}
 
         <section className="relative min-h-[680px] overflow-hidden bg-[#020817]">
 
@@ -283,9 +294,11 @@ function Home() {
                   className="inline-flex items-center justify-center rounded-full bg-[#f28c28] px-7 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-[#d97516]"
                 >
                   Hire Hospitality Staff
+
                   <span className="ml-3 text-lg">
                     →
                   </span>
+
                 </Link>
 
                 <Link
@@ -303,7 +316,9 @@ function Home() {
 
         </section>
 
-        {/* TRUST BAR */}
+        {/* =================================================
+            TRUST BAR
+        ================================================= */}
 
         <section className="border-b border-slate-200 bg-white">
 
@@ -333,7 +348,9 @@ function Home() {
 
         </section>
 
-        {/* INTRODUCTION */}
+        {/* =================================================
+            INTRO
+        ================================================= */}
 
         <section className="bg-white py-24">
 
@@ -379,9 +396,11 @@ function Home() {
                   className="mt-8 inline-flex font-bold text-[#020817] transition hover:text-[#f28c28]"
                 >
                   Explore Customer Experience
+
                   <span className="ml-3 text-[#f28c28]">
                     →
                   </span>
+
                 </Link>
 
               </div>
@@ -392,7 +411,9 @@ function Home() {
 
         </section>
 
-        {/* SERVICES */}
+        {/* =================================================
+            SERVICES
+        ================================================= */}
 
         <section className="bg-slate-50 py-24">
 
@@ -445,7 +466,9 @@ function Home() {
 
         </section>
 
-        {/* FINAL CTA */}
+        {/* =================================================
+            FINAL CTA
+        ================================================= */}
 
         <section className="bg-[#020817] py-24">
 
