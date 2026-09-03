@@ -64,13 +64,13 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[94px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
-        {/* LOGO */}
+        {/* ESP LOGO */}
         <Link to="/" className="flex items-center">
-          <div className="relative h-[82px] w-[205px] overflow-hidden">
+          <div className="relative h-[86px] w-[220px] overflow-hidden">
             <img
               src="/esp-logo-full.png"
               alt="ESP Exceptional Service Personnel"
-              className="absolute left-[-4px] top-1/2 h-[112px] w-[185px] -translate-y-1/2 object-contain"
+              className="absolute left-[-28px] top-1/2 h-[150px] w-[250px] -translate-y-1/2 object-contain"
             />
           </div>
         </Link>
@@ -79,7 +79,9 @@ function Header() {
         <nav className="hidden items-center gap-8 lg:flex">
           <NavLink to="/staffing">Staffing</NavLink>
           <NavLink to="/training">Training</NavLink>
-          <NavLink to="/customer-experience">Customer Experience</NavLink>
+          <NavLink to="/customer-experience">
+            Customer Experience
+          </NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/faq">FAQ</NavLink>
 
@@ -146,9 +148,15 @@ function SecondaryButton({ to, children }) {
    SECTION HEADING
    ========================================================= */
 
-function SectionHeading({ eyebrow, title, text, light = false }) {
+function SectionHeading({
+  eyebrow,
+  title,
+  text,
+  light = false,
+}) {
   return (
     <div className="max-w-3xl">
+
       {eyebrow && (
         <div
           className={`mb-4 text-sm font-bold uppercase tracking-[0.2em] ${
@@ -181,31 +189,35 @@ function SectionHeading({ eyebrow, title, text, light = false }) {
 }
 
 /* =========================================================
-   HOME
+   HOME PAGE
    ========================================================= */
 
 function Home() {
   return (
     <main>
 
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+          ===================================================== */}
+
       <section className="relative overflow-hidden bg-[#020817]">
         <div className="relative min-h-[700px] lg:min-h-[700px]">
 
           {/* HERO IMAGE */}
-          <div className="absolute inset-y-0 right-0 w-full lg:w-[64%]">
+          <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
             <div className="absolute inset-0 overflow-hidden">
 
               <img
                 src="/esp-hero-hospitality.png"
                 alt="Professional hospitality service"
-                className="absolute inset-0 h-full w-full scale-[1.08] object-cover object-[82%_center]"
+                className="absolute inset-0 h-full w-full scale-[1.22] object-cover object-[100%_center]"
               />
 
-              {/* Dark gradient over image */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-[#020817]/80 via-35% to-transparent" />
+              {/* Image fade into navy */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-[#020817]/75 via-30% to-transparent" />
 
               <div className="absolute inset-0 bg-[#020817]/15" />
+
             </div>
           </div>
 
@@ -241,7 +253,7 @@ function Home() {
                 across Gauteng.
               </p>
 
-              {/* CTA */}
+              {/* BUTTONS */}
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <PrimaryButton to="/staffing">
                   Hire Hospitality Staff
@@ -251,24 +263,49 @@ function Home() {
                   Train Your Team
                 </SecondaryButton>
               </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* TRUST BAR */}
+      {/* =====================================================
+          TRUST BAR
+          ===================================================== */}
+
       <section className="border-b border-slate-800 bg-[#071120]">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-700 lg:grid-cols-4">
-          <TrustItem number="2007" label="Established" />
-          <TrustItem number="250+" label="Trained Personnel" />
-          <TrustItem number="Gauteng" label="Service Area" />
-          <TrustItem number="5-Star" label="Service Focus" />
+
+          <TrustItem
+            number="2007"
+            label="Established"
+          />
+
+          <TrustItem
+            number="250+"
+            label="Trained Personnel"
+          />
+
+          <TrustItem
+            number="Gauteng"
+            label="Service Area"
+          />
+
+          <TrustItem
+            number="5-Star"
+            label="Service Focus"
+          />
+
         </div>
       </section>
 
-      {/* INTRO */}
+      {/* =====================================================
+          INTRODUCTION
+          ===================================================== */}
+
       <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
           <SectionHeading
             eyebrow="What ESP Does"
             title="More Than Staffing. We Build Better Service."
@@ -276,14 +313,22 @@ function Home() {
           />
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
+
             {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
+              <ServiceCard
+                key={service.title}
+                {...service}
+              />
             ))}
+
           </div>
         </div>
       </section>
 
-      {/* WHY ESP */}
+      {/* =====================================================
+          WHY ESP
+          ===================================================== */}
+
       <section className="bg-slate-950 py-24">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:px-8">
 
@@ -297,6 +342,7 @@ function Home() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
+
             <DarkFeature
               number="01"
               title="Experience"
@@ -320,13 +366,18 @@ function Home() {
               title="Results"
               text="Better service strengthens customer loyalty, reputation and business performance."
             />
+
           </div>
         </div>
       </section>
 
-      {/* SERVICES CTA */}
+      {/* =====================================================
+          FINAL CTA
+          ===================================================== */}
+
       <section className="bg-orange-600 py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-8">
+
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-orange-100">
               Ready to improve your service?
@@ -343,8 +394,10 @@ function Home() {
           >
             Talk to ESP →
           </Link>
+
         </div>
       </section>
+
     </main>
   );
 }
@@ -356,10 +409,15 @@ function Home() {
 function TrustItem({ number, label }) {
   return (
     <div className="px-6 py-7 text-center">
-      <div className="text-2xl font-black text-orange-500">{number}</div>
+
+      <div className="text-2xl font-black text-orange-500">
+        {number}
+      </div>
+
       <div className="mt-1 text-xs font-bold uppercase tracking-[0.16em] text-slate-300">
         {label}
       </div>
+
     </div>
   );
 }
@@ -368,9 +426,14 @@ function TrustItem({ number, label }) {
    SERVICE CARD
    ========================================================= */
 
-function ServiceCard({ title, text, link }) {
+function ServiceCard({
+  title,
+  text,
+  link,
+}) {
   return (
     <div className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-orange-300 hover:shadow-xl">
+
       <div className="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-xl font-black text-orange-600">
         +
       </div>
@@ -389,6 +452,7 @@ function ServiceCard({ title, text, link }) {
       >
         Learn More →
       </Link>
+
     </div>
   );
 }
@@ -397,10 +461,17 @@ function ServiceCard({ title, text, link }) {
    DARK FEATURE
    ========================================================= */
 
-function DarkFeature({ number, title, text }) {
+function DarkFeature({
+  number,
+  title,
+  text,
+}) {
   return (
     <div className="rounded-2xl border border-slate-800 bg-slate-900 p-7">
-      <div className="text-sm font-black text-orange-500">{number}</div>
+
+      <div className="text-sm font-black text-orange-500">
+        {number}
+      </div>
 
       <h3 className="mt-4 text-xl font-black text-white">
         {title}
@@ -409,12 +480,13 @@ function DarkFeature({ number, title, text }) {
       <p className="mt-3 text-sm leading-7 text-slate-400">
         {text}
       </p>
+
     </div>
   );
 }
 
 /* =========================================================
-   STAFFING PAGE
+   STAFFING HERO
    ========================================================= */
 
 function Staffing() {
@@ -424,7 +496,9 @@ function Staffing() {
       title="Professional Hospitality Staff When You Need Them."
       text="Reliable, presentable and service-focused personnel for hospitality businesses, functions, events and customer-facing operations across Gauteng."
     >
-      <PrimaryButton to="/contact">Request Staff</PrimaryButton>
+      <PrimaryButton to="/contact">
+        Request Staff
+      </PrimaryButton>
     </PageHero>
   );
 }
@@ -445,13 +519,21 @@ function StaffingContent() {
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
           {staffingServices.map((item, index) => (
-            <ListCard key={item} number={`0${index + 1}`} title={item} />
+            <ListCard
+              key={item}
+              number={`0${index + 1}`}
+              title={item}
+            />
           ))}
+
         </div>
 
         <div className="mt-20 rounded-3xl bg-slate-950 p-10 lg:p-14">
+
           <div className="max-w-3xl">
+
             <div className="text-sm font-bold uppercase tracking-[0.2em] text-orange-500">
               Service First
             </div>
@@ -471,15 +553,17 @@ function StaffingContent() {
                 Discuss Your Staffing Needs
               </PrimaryButton>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );
 }
 
 /* =========================================================
-   TRAINING PAGE
+   TRAINING
    ========================================================= */
 
 function Training() {
@@ -490,7 +574,9 @@ function Training() {
         title="Train Your Team to Deliver Five-Star Service."
         text="Practical, engaging training designed to improve confidence, professionalism and customer service performance."
       >
-        <PrimaryButton to="/contact">Discuss Training</PrimaryButton>
+        <PrimaryButton to="/contact">
+          Discuss Training
+        </PrimaryButton>
       </PageHero>
 
       <section className="bg-white py-24">
@@ -503,6 +589,7 @@ function Training() {
           />
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
             {trainingAreas.map((item, index) => (
               <ListCard
                 key={item}
@@ -510,6 +597,7 @@ function Training() {
                 title={item}
               />
             ))}
+
           </div>
 
         </div>
@@ -519,7 +607,7 @@ function Training() {
 }
 
 /* =========================================================
-   CUSTOMER EXPERIENCE PAGE
+   CUSTOMER EXPERIENCE
    ========================================================= */
 
 function CustomerExperience() {
@@ -530,7 +618,9 @@ function CustomerExperience() {
         title="Turn Good Service Into Exceptional Service."
         text="We help customer-facing businesses identify service gaps, strengthen standards and build a culture where exceptional experiences become consistent."
       >
-        <PrimaryButton to="/contact">Improve Your Service</PrimaryButton>
+        <PrimaryButton to="/contact">
+          Improve Your Service
+        </PrimaryButton>
       </PageHero>
 
       <section className="bg-white py-24">
@@ -543,6 +633,7 @@ function CustomerExperience() {
           />
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
             {experienceAreas.map((item, index) => (
               <ListCard
                 key={item}
@@ -550,6 +641,7 @@ function CustomerExperience() {
                 title={item}
               />
             ))}
+
           </div>
 
         </div>
@@ -557,12 +649,14 @@ function CustomerExperience() {
 
       <section className="bg-slate-950 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
           <SectionHeading
             light
             eyebrow="The ESP Approach"
             title="Observe. Improve. Train. Repeat."
             text="Sustainable service improvement comes from understanding what is happening now, implementing practical changes and giving teams the confidence to maintain the standard."
           />
+
         </div>
       </section>
     </>
@@ -570,7 +664,7 @@ function CustomerExperience() {
 }
 
 /* =========================================================
-   ABOUT PAGE
+   ABOUT
    ========================================================= */
 
 function About() {
@@ -594,6 +688,7 @@ function About() {
           </div>
 
           <div className="space-y-6 text-lg leading-8 text-slate-600">
+
             <p>
               ESP brings together hospitality staffing, practical training and
               customer experience thinking to help businesses raise their
@@ -610,6 +705,7 @@ function About() {
               That philosophy applies across hospitality and any environment
               where people interact directly with customers.
             </p>
+
           </div>
 
         </div>
@@ -647,7 +743,7 @@ function About() {
 }
 
 /* =========================================================
-   FAQ PAGE
+   FAQ
    ========================================================= */
 
 function FAQ() {
@@ -696,11 +792,13 @@ function FAQ() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
 
           <div className="space-y-5">
+
             {faqs.map((faq) => (
               <details
                 key={faq.question}
                 className="group rounded-2xl border border-slate-200 bg-white p-7"
               >
+
                 <summary className="cursor-pointer list-none pr-8 text-lg font-black text-slate-950">
                   {faq.question}
                 </summary>
@@ -708,8 +806,10 @@ function FAQ() {
                 <p className="mt-5 leading-7 text-slate-600">
                   {faq.answer}
                 </p>
+
               </details>
             ))}
+
           </div>
 
         </div>
@@ -719,7 +819,7 @@ function FAQ() {
 }
 
 /* =========================================================
-   CONTACT PAGE
+   CONTACT
    ========================================================= */
 
 function Contact() {
@@ -735,6 +835,7 @@ function Contact() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
 
           <div>
+
             <SectionHeading
               eyebrow="Contact ESP"
               title="Tell Us What You Need."
@@ -742,6 +843,7 @@ function Contact() {
             />
 
             <div className="mt-10 rounded-2xl bg-slate-950 p-8">
+
               <div className="text-sm font-bold uppercase tracking-[0.2em] text-orange-500">
                 Service Areas
               </div>
@@ -749,10 +851,13 @@ function Contact() {
               <p className="mt-4 text-lg leading-8 text-slate-300">
                 Johannesburg • Pretoria • Midrand • Centurion • Greater Gauteng
               </p>
+
             </div>
+
           </div>
 
           <div className="rounded-3xl bg-slate-50 p-8 lg:p-10">
+
             <h2 className="text-2xl font-black text-slate-950">
               Enquiry
             </h2>
@@ -760,11 +865,20 @@ function Contact() {
             <div className="mt-8 space-y-5">
 
               <Input label="Name" />
+
               <Input label="Company" />
-              <Input label="Email" type="email" />
-              <Input label="Telephone" />
+
+              <Input
+                label="Email"
+                type="email"
+              />
+
+              <Input
+                label="Telephone"
+              />
 
               <div>
+
                 <label className="mb-2 block text-sm font-bold text-slate-800">
                   How can we help?
                 </label>
@@ -774,6 +888,7 @@ function Contact() {
                   className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-orange-500"
                   placeholder="Tell us about your staffing, training or customer experience requirements..."
                 />
+
               </div>
 
               <button
@@ -784,6 +899,7 @@ function Contact() {
               </button>
 
             </div>
+
           </div>
 
         </div>
@@ -796,9 +912,13 @@ function Contact() {
    INPUT
    ========================================================= */
 
-function Input({ label, type = "text" }) {
+function Input({
+  label,
+  type = "text",
+}) {
   return (
     <div>
+
       <label className="mb-2 block text-sm font-bold text-slate-800">
         {label}
       </label>
@@ -807,6 +927,7 @@ function Input({ label, type = "text" }) {
         type={type}
         className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-orange-500"
       />
+
     </div>
   );
 }
@@ -815,9 +936,15 @@ function Input({ label, type = "text" }) {
    PAGE HERO
    ========================================================= */
 
-function PageHero({ eyebrow, title, text, children }) {
+function PageHero({
+  eyebrow,
+  title,
+  text,
+  children,
+}) {
   return (
     <section className="bg-slate-950 py-24 lg:py-32">
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         <div className="max-w-4xl">
@@ -841,7 +968,9 @@ function PageHero({ eyebrow, title, text, children }) {
           )}
 
         </div>
+
       </div>
+
     </section>
   );
 }
@@ -850,9 +979,13 @@ function PageHero({ eyebrow, title, text, children }) {
    LIST CARD
    ========================================================= */
 
-function ListCard({ number, title }) {
+function ListCard({
+  number,
+  title,
+}) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+
       <div className="text-sm font-black text-orange-600">
         {number}
       </div>
@@ -860,6 +993,7 @@ function ListCard({ number, title }) {
       <h3 className="mt-4 text-lg font-black text-slate-950">
         {title}
       </h3>
+
     </div>
   );
 }
@@ -868,9 +1002,14 @@ function ListCard({ number, title }) {
    STAT CARD
    ========================================================= */
 
-function StatCard({ number, title, text }) {
+function StatCard({
+  number,
+  title,
+  text,
+}) {
   return (
     <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8">
+
       <div className="text-4xl font-black text-orange-500">
         {number}
       </div>
@@ -882,6 +1021,7 @@ function StatCard({ number, title, text }) {
       <p className="mt-3 leading-7 text-slate-400">
         {text}
       </p>
+
     </div>
   );
 }
@@ -893,6 +1033,7 @@ function StatCard({ number, title, text }) {
 function NotFound() {
   return (
     <section className="bg-slate-950 py-32">
+
       <div className="mx-auto max-w-3xl px-6 text-center">
 
         <div className="text-7xl font-black text-orange-500">
@@ -914,6 +1055,7 @@ function NotFound() {
         </div>
 
       </div>
+
     </section>
   );
 }
@@ -934,13 +1076,17 @@ function Footer() {
           <div className="lg:col-span-2">
 
             <Link to="/" className="inline-block">
-              <div className="relative h-[80px] w-[190px] overflow-hidden">
+
+              <div className="relative h-[82px] w-[205px] overflow-hidden">
+
                 <img
                   src="/esp-logo-full.png"
                   alt="ESP Exceptional Service Personnel"
-                  className="absolute left-[-3px] top-1/2 h-[108px] w-[175px] -translate-y-1/2 object-contain"
+                  className="absolute left-[-25px] top-1/2 h-[145px] w-[235px] -translate-y-1/2 object-contain"
                 />
+
               </div>
+
             </Link>
 
             <p className="mt-5 max-w-xl leading-7 text-slate-400">
@@ -956,44 +1102,70 @@ function Footer() {
 
           {/* SERVICES */}
           <div>
+
             <h3 className="font-black text-white">
               Services
             </h3>
 
             <div className="mt-5 space-y-3 text-sm text-slate-400">
-              <Link className="block hover:text-orange-500" to="/staffing">
+
+              <Link
+                className="block hover:text-orange-500"
+                to="/staffing"
+              >
                 Hospitality Staffing
               </Link>
 
-              <Link className="block hover:text-orange-500" to="/training">
+              <Link
+                className="block hover:text-orange-500"
+                to="/training"
+              >
                 Training & Development
               </Link>
 
-              <Link className="block hover:text-orange-500" to="/customer-experience">
+              <Link
+                className="block hover:text-orange-500"
+                to="/customer-experience"
+              >
                 Customer Experience
               </Link>
+
             </div>
+
           </div>
 
           {/* COMPANY */}
           <div>
+
             <h3 className="font-black text-white">
               Company
             </h3>
 
             <div className="mt-5 space-y-3 text-sm text-slate-400">
-              <Link className="block hover:text-orange-500" to="/about">
+
+              <Link
+                className="block hover:text-orange-500"
+                to="/about"
+              >
                 About ESP
               </Link>
 
-              <Link className="block hover:text-orange-500" to="/faq">
+              <Link
+                className="block hover:text-orange-500"
+                to="/faq"
+              >
                 FAQ
               </Link>
 
-              <Link className="block hover:text-orange-500" to="/contact">
+              <Link
+                className="block hover:text-orange-500"
+                to="/contact"
+              >
                 Get in Touch
               </Link>
+
             </div>
+
           </div>
 
         </div>
@@ -1003,6 +1175,7 @@ function Footer() {
         </div>
 
       </div>
+
     </footer>
   );
 }
@@ -1018,7 +1191,11 @@ export default function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
         <Route
           path="/staffing"
@@ -1030,20 +1207,36 @@ export default function App() {
           }
         />
 
-        <Route path="/training" element={<Training />} />
+        <Route
+          path="/training"
+          element={<Training />}
+        />
 
         <Route
           path="/customer-experience"
           element={<CustomerExperience />}
         />
 
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/about"
+          element={<About />}
+        />
 
-        <Route path="/faq" element={<FAQ />} />
+        <Route
+          path="/faq"
+          element={<FAQ />}
+        />
 
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
 
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
+
       </Routes>
 
       <Footer />
