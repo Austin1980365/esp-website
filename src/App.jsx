@@ -9,17 +9,17 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[92px] max-w-7xl items-center justify-between px-6 lg:px-8">
-        
-        {/* LOGO */}
+
+        {/* MODERN LOGO */}
         <Link to="/" className="flex items-center">
           <img
-            src="/esp-logo-full.png"
+            src="/esp-logo-modern.png"
             alt="ESP Exceptional Service Personnel"
-            className="h-[76px] w-[190px] object-contain object-left"
+            className="h-[78px] w-[190px] object-contain object-left"
           />
         </Link>
 
-        {/* NAVIGATION */}
+        {/* DESKTOP NAVIGATION */}
         <nav className="hidden items-center gap-8 lg:flex">
           <NavLink to="/staffing">Staffing</NavLink>
           <NavLink to="/training">Training</NavLink>
@@ -64,14 +64,16 @@ function Footer() {
   return (
     <footer className="bg-[#020817] text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
+          {/* FOOTER BRAND */}
           <div>
             <div className="mb-5">
               <img
-                src="/esp-logo-full.png"
+                src="/esp-logo-modern.png"
                 alt="ESP Exceptional Service Personnel"
-                className="h-[72px] w-[190px] object-contain object-left brightness-0 invert"
+                className="h-[82px] w-[200px] object-contain object-left"
               />
             </div>
 
@@ -81,6 +83,7 @@ function Footer() {
             </p>
           </div>
 
+          {/* SERVICES */}
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Services
@@ -110,6 +113,7 @@ function Footer() {
             </div>
           </div>
 
+          {/* COMPANY */}
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Company
@@ -139,6 +143,7 @@ function Footer() {
             </div>
           </div>
 
+          {/* SERVICE AREA */}
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Service Area
@@ -156,6 +161,7 @@ function Footer() {
               Greater Gauteng
             </p>
           </div>
+
         </div>
 
         <div className="mt-14 border-t border-slate-800 pt-8 text-sm text-slate-500">
@@ -164,6 +170,7 @@ function Footer() {
             rights reserved.
           </p>
         </div>
+
       </div>
     </footer>
   );
@@ -185,30 +192,39 @@ function Home() {
         ================================================= */}
 
         <section className="relative min-h-[680px] overflow-hidden bg-[#020817]">
-          
-          {/* HERO IMAGE */}
+
+          {/* HERO PHOTOGRAPH */}
           <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
+
             <img
               src="/esp-hero-final.png"
               alt="Professional hospitality waiter serving guests"
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
-            {/* LIGHTER BLEND - prevents shadow effect */}
+            {/* LIGHT PHOTO BLEND */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/90 via-[#020817]/35 via-25% to-transparent" />
+
           </div>
 
           {/* HERO CONTENT */}
           <div className="relative z-10 mx-auto flex min-h-[680px] max-w-7xl items-center px-6 py-20 lg:px-8">
+
             <div className="max-w-2xl">
 
+              {/* EYEBROW */}
               <div className="mb-6 inline-flex items-center rounded-full border border-[#f28c28]/40 bg-[#f28c28]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                 Five-Star Customer Experience
               </div>
 
+              {/* HEADLINE */}
               <h1 className="text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
+
                 Exceptional
-                <span className="block">Service</span>
+
+                <span className="block">
+                  Service
+                </span>
 
                 <span className="mt-3 block text-white">
                   Starts With
@@ -221,14 +237,17 @@ function Home() {
                 <span className="block text-[#f28c28]">
                   People.
                 </span>
+
               </h1>
 
+              {/* INTRO */}
               <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
                 Professional hospitality staffing, practical training and
                 customer experience solutions for businesses and events
                 across Gauteng.
               </p>
 
+              {/* BUTTONS */}
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
 
                 <Link
@@ -236,7 +255,9 @@ function Home() {
                   className="inline-flex items-center justify-center rounded-full bg-[#f28c28] px-7 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-[#d97516]"
                 >
                   Hire Hospitality Staff
-                  <span className="ml-3 text-lg">→</span>
+                  <span className="ml-3 text-lg">
+                    →
+                  </span>
                 </Link>
 
                 <Link
@@ -247,8 +268,11 @@ function Home() {
                 </Link>
 
               </div>
+
             </div>
+
           </div>
+
         </section>
 
         {/* =================================================
@@ -256,6 +280,7 @@ function Home() {
         ================================================= */}
 
         <section className="border-b border-slate-200 bg-white">
+
           <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 lg:grid-cols-4">
 
             <TrustItem
@@ -279,6 +304,7 @@ function Home() {
             />
 
           </div>
+
         </section>
 
         {/* =================================================
@@ -286,24 +312,29 @@ function Home() {
         ================================================= */}
 
         <section className="bg-white py-24">
+
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
 
               <div>
+
                 <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                   More Than Staffing
                 </p>
 
                 <h2 className="text-4xl font-black tracking-tight text-[#020817] sm:text-5xl">
                   Service is not just what your customers receive.
+
                   <span className="block text-[#f28c28]">
                     It is how they remember you.
                   </span>
                 </h2>
+
               </div>
 
               <div>
+
                 <p className="text-lg leading-8 text-slate-600">
                   ESP combines practical hospitality experience with a
                   customer-first approach to help businesses create service
@@ -322,12 +353,17 @@ function Home() {
                   className="mt-8 inline-flex items-center font-bold text-[#020817] transition hover:text-[#f28c28]"
                 >
                   Explore Customer Experience
-                  <span className="ml-3 text-[#f28c28]">→</span>
+                  <span className="ml-3 text-[#f28c28]">
+                    →
+                  </span>
                 </Link>
+
               </div>
 
             </div>
+
           </div>
+
         </section>
 
         {/* =================================================
@@ -335,9 +371,11 @@ function Home() {
         ================================================= */}
 
         <section className="bg-slate-50 py-24">
+
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div className="max-w-2xl">
+
               <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                 What We Do
               </p>
@@ -351,6 +389,7 @@ function Home() {
                 scenes, we help businesses build stronger customer
                 experiences.
               </p>
+
             </div>
 
             <div className="mt-14 grid gap-7 md:grid-cols-3">
@@ -377,7 +416,9 @@ function Home() {
               />
 
             </div>
+
           </div>
+
         </section>
 
         {/* =================================================
@@ -385,6 +426,7 @@ function Home() {
         ================================================= */}
 
         <section className="bg-[#020817] py-24">
+
           <div className="mx-auto max-w-5xl px-6 text-center lg:px-8">
 
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
@@ -392,10 +434,13 @@ function Home() {
             </p>
 
             <h2 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
+
               Let's create a customer experience
+
               <span className="block text-[#f28c28]">
                 your business can be proud of.
               </span>
+
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400">
@@ -408,10 +453,13 @@ function Home() {
               className="mt-9 inline-flex rounded-full bg-[#f28c28] px-8 py-4 text-sm font-bold text-white transition hover:bg-[#d97516]"
             >
               Get in Touch
-              <span className="ml-3">→</span>
+              <span className="ml-3">
+                →
+              </span>
             </Link>
 
           </div>
+
         </section>
 
       </main>
@@ -421,9 +469,14 @@ function Home() {
   );
 }
 
+/* =========================================================
+   TRUST ITEM
+========================================================= */
+
 function TrustItem({ number, label }) {
   return (
     <div className="px-5 py-8 text-center sm:px-8">
+
       <div className="text-2xl font-black text-[#020817]">
         {number}
       </div>
@@ -431,16 +484,27 @@ function TrustItem({ number, label }) {
       <div className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-500">
         {label}
       </div>
+
     </div>
   );
 }
 
-function ServiceCard({ number, title, text, link }) {
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+function ServiceCard({
+  number,
+  title,
+  text,
+  link,
+}) {
   return (
     <Link
       to={link}
       className="group border border-slate-200 bg-white p-8 transition hover:-translate-y-1 hover:border-[#f28c28]/40 hover:shadow-xl"
     >
+
       <div className="text-sm font-black text-[#f28c28]">
         {number}
       </div>
@@ -456,6 +520,7 @@ function ServiceCard({ number, title, text, link }) {
       <div className="mt-8 font-bold text-[#020817] group-hover:text-[#f28c28]">
         Learn More →
       </div>
+
     </Link>
   );
 }
@@ -487,11 +552,13 @@ function StaffingContent() {
     <main>
 
       <section className="bg-white py-24">
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
           <div className="grid gap-16 lg:grid-cols-2">
 
             <div>
+
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                 Professional Personnel
               </p>
@@ -499,9 +566,11 @@ function StaffingContent() {
               <h2 className="mt-4 text-4xl font-black text-[#020817]">
                 Reliable people. Professional standards.
               </h2>
+
             </div>
 
             <div className="text-lg leading-8 text-slate-600">
+
               <p>
                 ESP provides professional hospitality personnel for
                 customer-facing environments where presentation, reliability
@@ -513,6 +582,7 @@ function StaffingContent() {
                 corporate events, venues and other hospitality operations
                 across Gauteng.
               </p>
+
             </div>
 
           </div>
@@ -535,10 +605,13 @@ function StaffingContent() {
             />
 
           </div>
+
         </div>
+
       </section>
 
       <section className="bg-slate-50 py-24">
+
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
 
           <h2 className="text-4xl font-black text-[#020817]">
@@ -558,15 +631,24 @@ function StaffingContent() {
           </Link>
 
         </div>
+
       </section>
 
     </main>
   );
 }
 
-function FeatureCard({ title, text }) {
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+function FeatureCard({
+  title,
+  text,
+}) {
   return (
     <div className="border border-slate-200 bg-white p-8">
+
       <div className="mb-5 h-1 w-12 bg-[#f28c28]" />
 
       <h3 className="text-xl font-black text-[#020817]">
@@ -576,6 +658,7 @@ function FeatureCard({ title, text }) {
       <p className="mt-4 leading-7 text-slate-600">
         {text}
       </p>
+
     </div>
   );
 }
@@ -592,17 +675,19 @@ function Training() {
       <PageHero
         eyebrow="Training"
         title="Build a team that understands exceptional service."
-        text="Practical customer-service training designed to improve confidence, consistency and the guest experience."
+        text="Practical, customer-service training designed to improve confidence, consistency and the guest experience."
       />
 
       <main>
 
         <section className="bg-white py-24">
+
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div className="grid gap-14 lg:grid-cols-2">
 
               <div>
+
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                   Practical Training
                 </p>
@@ -616,6 +701,7 @@ function Training() {
                   practical guidance, clear standards and an understanding of
                   what customers actually experience.
                 </p>
+
               </div>
 
               <div className="grid gap-5">
@@ -643,10 +729,13 @@ function Training() {
               </div>
 
             </div>
+
           </div>
+
         </section>
 
         <section className="bg-[#020817] py-24">
+
           <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
 
             <h2 className="text-4xl font-black text-white">
@@ -666,6 +755,7 @@ function Training() {
             </Link>
 
           </div>
+
         </section>
 
       </main>
@@ -675,9 +765,17 @@ function Training() {
   );
 }
 
-function TrainingItem({ title, text }) {
+/* =========================================================
+   TRAINING ITEM
+========================================================= */
+
+function TrainingItem({
+  title,
+  text,
+}) {
   return (
     <div className="border-l-4 border-[#f28c28] bg-slate-50 p-6">
+
       <h3 className="font-black text-[#020817]">
         {title}
       </h3>
@@ -685,6 +783,7 @@ function TrainingItem({ title, text }) {
       <p className="mt-2 leading-7 text-slate-600">
         {text}
       </p>
+
     </div>
   );
 }
@@ -707,9 +806,11 @@ function CustomerExperience() {
       <main>
 
         <section className="bg-white py-24">
+
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div className="max-w-3xl">
+
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                 Experience Matters
               </p>
@@ -723,6 +824,7 @@ function CustomerExperience() {
                 business that deals with customers has an opportunity to
                 create a stronger experience.
               </p>
+
             </div>
 
             <div className="mt-16 grid gap-6 md:grid-cols-3">
@@ -746,10 +848,13 @@ function CustomerExperience() {
               />
 
             </div>
+
           </div>
+
         </section>
 
         <section className="bg-slate-50 py-24">
+
           <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
 
             <h2 className="text-4xl font-black text-[#020817]">
@@ -769,6 +874,7 @@ function CustomerExperience() {
             </Link>
 
           </div>
+
         </section>
 
       </main>
@@ -778,9 +884,18 @@ function CustomerExperience() {
   );
 }
 
-function ExperienceCard({ number, title, text }) {
+/* =========================================================
+   EXPERIENCE CARD
+========================================================= */
+
+function ExperienceCard({
+  number,
+  title,
+  text,
+}) {
   return (
     <div className="border border-slate-200 bg-white p-8">
+
       <div className="text-sm font-black text-[#f28c28]">
         {number}
       </div>
@@ -792,6 +907,7 @@ function ExperienceCard({ number, title, text }) {
       <p className="mt-4 leading-7 text-slate-600">
         {text}
       </p>
+
     </div>
   );
 }
@@ -814,11 +930,13 @@ function About() {
       <main>
 
         <section className="bg-white py-24">
+
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div className="grid gap-16 lg:grid-cols-2">
 
               <div>
+
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                   Our Story
                 </p>
@@ -826,9 +944,11 @@ function About() {
                 <h2 className="mt-4 text-4xl font-black text-[#020817]">
                   Hospitality experience with a customer-first mindset.
                 </h2>
+
               </div>
 
               <div className="text-lg leading-8 text-slate-600">
+
                 <p>
                   Exceptional Service Personnel was established in 2007 with
                   a focus on supplying professional hospitality personnel.
@@ -845,14 +965,17 @@ function About() {
                   Today, ESP brings together staffing, training and customer
                   experience solutions with hospitality at the foundation.
                 </p>
+
               </div>
 
             </div>
 
           </div>
+
         </section>
 
         <section className="bg-slate-50 py-24">
+
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
             <div className="grid gap-6 md:grid-cols-3">
@@ -875,6 +998,7 @@ function About() {
             </div>
 
           </div>
+
         </section>
 
       </main>
@@ -884,9 +1008,17 @@ function About() {
   );
 }
 
-function ValueCard({ title, text }) {
+/* =========================================================
+   VALUE CARD
+========================================================= */
+
+function ValueCard({
+  title,
+  text,
+}) {
   return (
     <div className="bg-white p-8">
+
       <div className="mb-6 h-1 w-12 bg-[#f28c28]" />
 
       <h3 className="text-2xl font-black text-[#020817]">
@@ -896,6 +1028,7 @@ function ValueCard({ title, text }) {
       <p className="mt-4 leading-7 text-slate-600">
         {text}
       </p>
+
     </div>
   );
 }
@@ -916,6 +1049,7 @@ function FAQ() {
       />
 
       <main className="bg-white py-24">
+
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
 
           <div className="space-y-5">
@@ -953,6 +1087,7 @@ function FAQ() {
           </div>
 
         </div>
+
       </main>
 
       <Footer />
@@ -960,9 +1095,17 @@ function FAQ() {
   );
 }
 
-function FAQItem({ question, answer }) {
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+function FAQItem({
+  question,
+  answer,
+}) {
   return (
     <div className="border border-slate-200 p-7">
+
       <h3 className="text-lg font-black text-[#020817]">
         {question}
       </h3>
@@ -970,6 +1113,7 @@ function FAQItem({ question, answer }) {
       <p className="mt-3 leading-7 text-slate-600">
         {answer}
       </p>
+
     </div>
   );
 }
@@ -995,7 +1139,9 @@ function Contact() {
 
           <div className="grid gap-16 lg:grid-cols-2">
 
+            {/* CONTACT INTRO */}
             <div>
+
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                 Start a Conversation
               </p>
@@ -1011,6 +1157,7 @@ function Contact() {
               </p>
 
               <div className="mt-10 border-l-4 border-[#f28c28] bg-slate-50 p-6">
+
                 <p className="font-bold text-[#020817]">
                   Serving businesses across Gauteng
                 </p>
@@ -1019,9 +1166,12 @@ function Contact() {
                   Johannesburg · Pretoria · Midrand · Centurion · Greater
                   Gauteng
                 </p>
+
               </div>
+
             </div>
 
+            {/* CONTACT FORM */}
             <form
               className="border border-slate-200 bg-slate-50 p-8"
               onSubmit={(e) => e.preventDefault()}
@@ -1030,6 +1180,7 @@ function Contact() {
               <div className="grid gap-5">
 
                 <div>
+
                   <label className="mb-2 block text-sm font-bold text-[#020817]">
                     Name
                   </label>
@@ -1039,9 +1190,11 @@ function Contact() {
                     className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
                     placeholder="Your name"
                   />
+
                 </div>
 
                 <div>
+
                   <label className="mb-2 block text-sm font-bold text-[#020817]">
                     Business
                   </label>
@@ -1051,9 +1204,11 @@ function Contact() {
                     className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
                     placeholder="Business name"
                   />
+
                 </div>
 
                 <div>
+
                   <label className="mb-2 block text-sm font-bold text-[#020817]">
                     Email
                   </label>
@@ -1063,22 +1218,39 @@ function Contact() {
                     className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
                     placeholder="Email address"
                   />
+
                 </div>
 
                 <div>
+
                   <label className="mb-2 block text-sm font-bold text-[#020817]">
                     What can we help with?
                   </label>
 
                   <select className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]">
-                    <option>Hospitality Staffing</option>
-                    <option>Team Training</option>
-                    <option>Customer Experience</option>
-                    <option>Other</option>
+
+                    <option>
+                      Hospitality Staffing
+                    </option>
+
+                    <option>
+                      Team Training
+                    </option>
+
+                    <option>
+                      Customer Experience
+                    </option>
+
+                    <option>
+                      Other
+                    </option>
+
                   </select>
+
                 </div>
 
                 <div>
+
                   <label className="mb-2 block text-sm font-bold text-[#020817]">
                     Message
                   </label>
@@ -1088,6 +1260,7 @@ function Contact() {
                     className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
                     placeholder="Tell us about your requirements..."
                   />
+
                 </div>
 
                 <button
@@ -1104,6 +1277,7 @@ function Contact() {
           </div>
 
         </div>
+
       </main>
 
       <Footer />
@@ -1115,9 +1289,14 @@ function Contact() {
    PAGE HERO
 ========================================================= */
 
-function PageHero({ eyebrow, title, text }) {
+function PageHero({
+  eyebrow,
+  title,
+  text,
+}) {
   return (
     <section className="bg-[#020817] py-24">
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         <div className="max-w-4xl">
@@ -1137,6 +1316,7 @@ function PageHero({ eyebrow, title, text }) {
         </div>
 
       </div>
+
     </section>
   );
 }
@@ -1151,6 +1331,7 @@ function NotFound() {
       <Header />
 
       <main className="flex min-h-[70vh] items-center justify-center bg-slate-50 px-6">
+
         <div className="text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
@@ -1173,6 +1354,7 @@ function NotFound() {
           </Link>
 
         </div>
+
       </main>
 
       <Footer />
@@ -1187,24 +1369,47 @@ function NotFound() {
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
 
-      <Route path="/staffing" element={<Staffing />} />
+      <Route
+        path="/"
+        element={<Home />}
+      />
 
-      <Route path="/training" element={<Training />} />
+      <Route
+        path="/staffing"
+        element={<Staffing />}
+      />
+
+      <Route
+        path="/training"
+        element={<Training />}
+      />
 
       <Route
         path="/customer-experience"
         element={<CustomerExperience />}
       />
 
-      <Route path="/about" element={<About />} />
+      <Route
+        path="/about"
+        element={<About />}
+      />
 
-      <Route path="/faq" element={<FAQ />} />
+      <Route
+        path="/faq"
+        element={<FAQ />}
+      />
 
-      <Route path="/contact" element={<Contact />} />
+      <Route
+        path="/contact"
+        element={<Contact />}
+      />
 
-      <Route path="*" element={<NotFound />} />
+      <Route
+        path="*"
+        element={<NotFound />}
+      />
+
     </Routes>
   );
 }
