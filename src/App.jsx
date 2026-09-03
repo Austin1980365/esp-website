@@ -2,36 +2,45 @@ import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 
 /* =========================================================
-   SHARED COMPONENTS
+   SHARED HEADER
 ========================================================= */
 
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
-      <div className="mx-auto flex h-[92px] max-w-7xl items-center justify-between px-6 lg:px-8">
+      <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
         {/* ESP MODERN LOGO */}
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex h-full items-center">
           <img
-            src="/ESP%20logo2.png"
+            src="/esp-logo%203%20modern.png"
             alt="ESP Exceptional Service Personnel"
-            className="h-[82px] w-[205px] object-contain object-left"
+            className="h-[94px] w-[235px] object-contain object-left"
           />
         </Link>
 
         {/* DESKTOP NAVIGATION */}
         <nav className="hidden items-center gap-8 lg:flex">
-          <NavLink to="/staffing">Staffing</NavLink>
 
-          <NavLink to="/training">Training</NavLink>
+          <NavLink to="/staffing">
+            Staffing
+          </NavLink>
+
+          <NavLink to="/training">
+            Training
+          </NavLink>
 
           <NavLink to="/customer-experience">
             Customer Experience
           </NavLink>
 
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about">
+            About
+          </NavLink>
 
-          <NavLink to="/faq">FAQ</NavLink>
+          <NavLink to="/faq">
+            FAQ
+          </NavLink>
 
           <Link
             to="/contact"
@@ -39,6 +48,7 @@ function Header() {
           >
             Get in Touch
           </Link>
+
         </nav>
 
         {/* MOBILE CTA */}
@@ -82,9 +92,9 @@ function Footer() {
 
             <Link to="/" className="inline-block">
               <img
-                src="/ESP%20logo2.png"
+                src="/esp-logo%203%20modern.png"
                 alt="ESP Exceptional Service Personnel"
-                className="h-[90px] w-[220px] object-contain object-left"
+                className="h-[100px] w-[245px] object-contain object-left"
               />
             </Link>
 
@@ -200,7 +210,7 @@ function Footer() {
 }
 
 /* =========================================================
-   HOME
+   HOME PAGE
 ========================================================= */
 
 function Home() {
@@ -216,7 +226,7 @@ function Home() {
 
         <section className="relative min-h-[680px] overflow-hidden bg-[#020817]">
 
-          {/* HERO PHOTO */}
+          {/* HERO PHOTOGRAPH */}
           <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
 
             <img
@@ -225,7 +235,7 @@ function Home() {
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
-            {/* SUBTLE NAVY BLEND */}
+            {/* DARK LEFT BLEND FOR TEXT READABILITY */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/90 via-[#020817]/35 via-25% to-transparent" />
 
           </div>
@@ -240,7 +250,7 @@ function Home() {
                 Five-Star Customer Experience
               </div>
 
-              {/* MAIN HEADLINE */}
+              {/* HEADLINE */}
               <h1 className="text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
 
                 Exceptional
@@ -263,7 +273,7 @@ function Home() {
 
               </h1>
 
-              {/* DESCRIPTION */}
+              {/* INTRO */}
               <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
                 Professional hospitality staffing, practical training and
                 customer experience solutions for businesses and events
@@ -278,9 +288,11 @@ function Home() {
                   className="inline-flex items-center justify-center rounded-full bg-[#f28c28] px-7 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-[#d97516]"
                 >
                   Hire Hospitality Staff
+
                   <span className="ml-3 text-lg">
                     →
                   </span>
+
                 </Link>
 
                 <Link
@@ -555,7 +567,7 @@ function ServiceCard({
 }
 
 /* =========================================================
-   STAFFING
+   STAFFING PAGE
 ========================================================= */
 
 function Staffing() {
@@ -687,7 +699,7 @@ function FeatureCard({
 }
 
 /* =========================================================
-   TRAINING
+   TRAINING PAGE
 ========================================================= */
 
 function Training() {
@@ -1162,7 +1174,7 @@ function Contact() {
 
           <div className="grid gap-16 lg:grid-cols-2">
 
-            {/* CONTACT INFORMATION */}
+            {/* CONTACT INTRO */}
             <div>
 
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
@@ -1194,7 +1206,7 @@ function Contact() {
 
             </div>
 
-            {/* FORM */}
+            {/* CONTACT FORM */}
             <form
               className="border border-slate-200 bg-slate-50 p-8"
               onSubmit={(e) => e.preventDefault()}
@@ -1345,7 +1357,7 @@ function PageHero({
 }
 
 /* =========================================================
-   404
+   404 PAGE
 ========================================================= */
 
 function NotFound() {
