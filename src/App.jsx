@@ -89,27 +89,42 @@ function TrustItem({ number, label }) { return <div className="px-5 py-8 text-ce
 function ServiceCard({ number, title, text, link }) { return <Link to={link} className="group border border-slate-200 bg-white p-8 transition hover:-translate-y-1 hover:border-[#f28c28]/40 hover:shadow-xl"><div className="text-sm font-black text-[#f28c28]">{number}</div><h3 className="mt-5 text-2xl font-black text-[#020817]">{title}</h3><p className="mt-4 leading-7 text-slate-600">{text}</p><span className="mt-7 inline-flex font-bold text-[#020817] group-hover:text-[#f28c28]">Learn more →</span></Link>; }
 
 function Staffing() {
-  return <><Header /><PageHero eyebrow="Hospitality Staffing" title="Professional people when you need them." intro="Professional waiters, barmen and event hospitality personnel for restaurants, functions, venues and customer-facing operations across Gauteng." />
+  return <><Header /><PageHero eyebrow="Hospitality Staffing Gauteng" title="Professional waiters, barmen and event staff when you need them." intro="ESP provides reliable hospitality staffing across Gauteng for restaurants, functions, conferences, venues and events — with people selected around presentation, professionalism and customer service." />
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-2">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">The Right People</p>
-            <h2 className="mt-4 text-4xl font-black text-[#020817]">Staff who understand that service matters.</h2>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">Waiters for Hire in Gauteng</p>
+            <h2 className="mt-4 text-4xl font-black text-[#020817]">The right people on the floor make a difference.</h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">Good hospitality is about more than filling a shift. The people representing your business need to be professional, presentable, dependable and focused on the guest.</p>
-            <p className="mt-5 text-lg leading-8 text-slate-600">Whether you need event waiters for a once-off function or dependable hospitality staff for ongoing operations, ESP focuses on matching the requirement with people who understand the standard expected on the floor.</p>
+            <p className="mt-5 text-lg leading-8 text-slate-600">If you need waiters for a function, barmen for an event, front-of-house staff for a restaurant, or hospitality personnel for an ongoing operation, ESP provides practical staffing support built around the service standard your customers expect.</p>
+            <p className="mt-5 text-lg leading-8 text-slate-600">We support staffing requirements across Johannesburg, Pretoria, Midrand, Centurion and the wider Gauteng area, for both once-off events and recurring hospitality needs.</p>
             <Link to="/contact" className="mt-8 inline-flex font-bold text-[#020817] transition hover:text-[#f28c28]">Discuss Your Staffing Requirement <span className="ml-3 text-[#f28c28]">→</span></Link>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
-            <Feature title="Waiters & Service Staff" text="Professional front-of-house personnel for restaurants, functions, conferences and events." />
-            <Feature title="Barmen" text="Confident bar personnel who understand service, presentation, guest interaction and professionalism." />
-            <Feature title="Event Personnel" text="Flexible hospitality staffing for conferences, launches, private functions and special events." />
-            <Feature title="Ongoing Support" text="Staffing support for once-off requirements as well as recurring or ongoing operational needs." />
+            <Feature title="Waiters & Front-of-House" text="Professional service staff for restaurants, private functions, conferences, weddings and events." />
+            <Feature title="Barmen & Bar Staff" text="Confident bar personnel who understand presentation, guest interaction and professional service." />
+            <Feature title="Conference & Event Staff" text="Flexible hospitality personnel for launches, conferences, functions, venues and special events." />
+            <Feature title="Once-Off & Ongoing Staffing" text="Support for a single event, recurring functions or ongoing operational hospitality requirements." />
           </div>
         </div>
       </div>
     </section>
     <section className="bg-slate-50 py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">Hospitality Staffing Services</p>
+          <h2 className="mt-4 text-4xl font-black text-[#020817] sm:text-5xl">Staffing built around your operation.</h2>
+          <p className="mt-6 text-lg leading-8 text-slate-600">Every business and event has different staffing requirements. ESP focuses on understanding the role, the environment and the level of service expected before supplying personnel.</p>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <ProofCard number="01" title="Restaurants" text="Front-of-house and hospitality staff for restaurant service and customer-facing operations." />
+          <ProofCard number="02" title="Functions & Events" text="Waiters, barmen and event personnel for private functions, conferences, launches and special occasions." />
+          <ProofCard number="03" title="Ongoing Operations" text="Reliable staffing support for businesses that need recurring or ongoing hospitality personnel." />
+        </div>
+      </div>
+    </section>
+    <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">Why Businesses Choose ESP</p>
