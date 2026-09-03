@@ -3,7 +3,7 @@ import { Link, Routes, Route } from "react-router-dom";
 
 /* =========================================================
    ESP — EXCEPTIONAL SERVICE PERSONNEL
-   Premium Hospitality Staffing, Training & Customer Experience
+   Hospitality Staffing | Training | Customer Experience
    ========================================================= */
 
 const services = [
@@ -64,13 +64,16 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[94px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
-        {/* ESP LOGO */}
+        {/* LOGO
+            The wrapper keeps the header fixed while allowing
+            the source logo to display at a useful visual size.
+        */}
         <Link to="/" className="flex items-center">
-          <div className="relative h-[86px] w-[220px] overflow-hidden">
+          <div className="relative h-[88px] w-[220px] overflow-hidden">
             <img
               src="/esp-logo-full.png"
               alt="ESP Exceptional Service Personnel"
-              className="absolute left-[-28px] top-1/2 h-[150px] w-[250px] -translate-y-1/2 object-contain"
+              className="absolute left-[-22px] top-1/2 h-[142px] w-[235px] -translate-y-1/2 object-contain"
             />
           </div>
         </Link>
@@ -93,7 +96,7 @@ function Header() {
           </Link>
         </nav>
 
-        {/* MOBILE CTA */}
+        {/* MOBILE */}
         <Link
           to="/contact"
           className="rounded-full bg-orange-600 px-5 py-3 text-sm font-bold text-white lg:hidden"
@@ -184,12 +187,13 @@ function SectionHeading({
           {text}
         </p>
       )}
+
     </div>
   );
 }
 
 /* =========================================================
-   HOME PAGE
+   HOME
    ========================================================= */
 
 function Home() {
@@ -201,22 +205,24 @@ function Home() {
           ===================================================== */}
 
       <section className="relative overflow-hidden bg-[#020817]">
+
         <div className="relative min-h-[700px] lg:min-h-[700px]">
 
-          {/* HERO IMAGE */}
-          <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
+          {/* CLEAN HERO PHOTOGRAPH */}
+          <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
             <div className="absolute inset-0 overflow-hidden">
 
               <img
-                src="/esp-hero-hospitality.png"
-                alt="Professional hospitality service"
-                className="absolute inset-0 h-full w-full scale-[1.22] object-cover object-[100%_center]"
+                src="/esp-hero-final.png"
+                alt="Professional hospitality waiter serving guests"
+                className="absolute inset-0 h-full w-full object-cover object-center"
               />
 
-              {/* Image fade into navy */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-[#020817]/75 via-30% to-transparent" />
+              {/* Navy fade from text area into photograph */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-[#020817]/80 via-25% to-transparent" />
 
-              <div className="absolute inset-0 bg-[#020817]/15" />
+              {/* Slight overall darkening for premium contrast */}
+              <div className="absolute inset-0 bg-[#020817]/10" />
 
             </div>
           </div>
@@ -231,30 +237,36 @@ function Home() {
                 Staffing • Training • Customer Experience
               </div>
 
-              {/* HEADLINE */}
+              {/* MAIN HEADLINE */}
               <h1 className="text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[68px]">
+
                 Exceptional
                 <br />
+
                 Service
                 <br />
+
                 Starts With
                 <br />
+
                 <span className="text-orange-500">
                   Exceptional
                   <br />
                   People.
                 </span>
+
               </h1>
 
-              {/* INTRO */}
+              {/* INTRODUCTION */}
               <p className="mt-8 max-w-[610px] text-lg leading-8 text-slate-200">
                 Professional hospitality staffing, practical training and
                 customer experience solutions for businesses and events
                 across Gauteng.
               </p>
 
-              {/* BUTTONS */}
+              {/* CTA BUTTONS */}
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+
                 <PrimaryButton to="/staffing">
                   Hire Hospitality Staff
                 </PrimaryButton>
@@ -262,10 +274,12 @@ function Home() {
                 <SecondaryButton to="/training">
                   Train Your Team
                 </SecondaryButton>
+
               </div>
 
             </div>
           </div>
+
         </div>
       </section>
 
@@ -274,6 +288,7 @@ function Home() {
           ===================================================== */}
 
       <section className="border-b border-slate-800 bg-[#071120]">
+
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-700 lg:grid-cols-4">
 
           <TrustItem
@@ -297,13 +312,15 @@ function Home() {
           />
 
         </div>
+
       </section>
 
       {/* =====================================================
-          INTRODUCTION
+          INTRO
           ===================================================== */}
 
       <section className="bg-white py-24">
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
           <SectionHeading
@@ -322,6 +339,7 @@ function Home() {
             ))}
 
           </div>
+
         </div>
       </section>
 
@@ -330,15 +348,18 @@ function Home() {
           ===================================================== */}
 
       <section className="bg-slate-950 py-24">
+
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:px-8">
 
           <div>
+
             <SectionHeading
               light
               eyebrow="Why ESP"
               title="Professional People. Practical Standards. Better Experiences."
               text="Great customer service does not happen by accident. It comes from people who understand service, clear standards and a culture that puts the customer first."
             />
+
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
@@ -368,6 +389,7 @@ function Home() {
             />
 
           </div>
+
         </div>
       </section>
 
@@ -376,9 +398,11 @@ function Home() {
           ===================================================== */}
 
       <section className="bg-orange-600 py-20">
+
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-8">
 
           <div>
+
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-orange-100">
               Ready to improve your service?
             </p>
@@ -386,6 +410,7 @@ function Home() {
             <h2 className="mt-3 max-w-3xl text-3xl font-black text-white sm:text-4xl">
               Let's create a customer experience your business can be proud of.
             </h2>
+
           </div>
 
           <Link
@@ -396,6 +421,7 @@ function Home() {
           </Link>
 
         </div>
+
       </section>
 
     </main>
@@ -486,84 +512,81 @@ function DarkFeature({
 }
 
 /* =========================================================
-   STAFFING HERO
+   STAFFING PAGE
    ========================================================= */
 
 function Staffing() {
   return (
-    <PageHero
-      eyebrow="Hospitality Staffing"
-      title="Professional Hospitality Staff When You Need Them."
-      text="Reliable, presentable and service-focused personnel for hospitality businesses, functions, events and customer-facing operations across Gauteng."
-    >
-      <PrimaryButton to="/contact">
-        Request Staff
-      </PrimaryButton>
-    </PageHero>
-  );
-}
+    <>
+      <PageHero
+        eyebrow="Hospitality Staffing"
+        title="Professional Hospitality Staff When You Need Them."
+        text="Reliable, presentable and service-focused personnel for hospitality businesses, functions, events and customer-facing operations across Gauteng."
+      >
+        <PrimaryButton to="/contact">
+          Request Staff
+        </PrimaryButton>
+      </PageHero>
 
-/* =========================================================
-   STAFFING CONTENT
-   ========================================================= */
+      <section className="bg-white py-24">
 
-function StaffingContent() {
-  return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-        <SectionHeading
-          eyebrow="Our Staffing Services"
-          title="The Right People Make the Difference."
-          text="ESP provides hospitality personnel who understand the importance of presentation, professionalism, teamwork and customer service."
-        />
+          <SectionHeading
+            eyebrow="Our Staffing Services"
+            title="The Right People Make the Difference."
+            text="ESP provides hospitality personnel who understand the importance of presentation, professionalism, teamwork and customer service."
+          />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-          {staffingServices.map((item, index) => (
-            <ListCard
-              key={item}
-              number={`0${index + 1}`}
-              title={item}
-            />
-          ))}
+            {staffingServices.map((item, index) => (
+              <ListCard
+                key={item}
+                number={`0${index + 1}`}
+                title={item}
+              />
+            ))}
 
-        </div>
+          </div>
 
-        <div className="mt-20 rounded-3xl bg-slate-950 p-10 lg:p-14">
+          <div className="mt-20 rounded-3xl bg-slate-950 p-10 lg:p-14">
 
-          <div className="max-w-3xl">
+            <div className="max-w-3xl">
 
-            <div className="text-sm font-bold uppercase tracking-[0.2em] text-orange-500">
-              Service First
-            </div>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-orange-500">
+                Service First
+              </div>
 
-            <h2 className="mt-4 text-3xl font-black text-white sm:text-4xl">
-              Staffing is not just about filling a shift.
-            </h2>
+              <h2 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+                Staffing is not just about filling a shift.
+              </h2>
 
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Your staff represent your business. That is why professional
-              appearance, attitude, communication and customer awareness
-              matter just as much as the role they perform.
-            </p>
+              <p className="mt-5 text-lg leading-8 text-slate-300">
+                Your staff represent your business. That is why professional
+                appearance, attitude, communication and customer awareness
+                matter just as much as the role they perform.
+              </p>
 
-            <div className="mt-8">
-              <PrimaryButton to="/contact">
-                Discuss Your Staffing Needs
-              </PrimaryButton>
+              <div className="mt-8">
+                <PrimaryButton to="/contact">
+                  Discuss Your Staffing Needs
+                </PrimaryButton>
+              </div>
+
             </div>
 
           </div>
+
         </div>
 
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
 /* =========================================================
-   TRAINING
+   TRAINING PAGE
    ========================================================= */
 
 function Training() {
@@ -580,6 +603,7 @@ function Training() {
       </PageHero>
 
       <section className="bg-white py-24">
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
           <SectionHeading
@@ -601,13 +625,14 @@ function Training() {
           </div>
 
         </div>
+
       </section>
     </>
   );
 }
 
 /* =========================================================
-   CUSTOMER EXPERIENCE
+   CUSTOMER EXPERIENCE PAGE
    ========================================================= */
 
 function CustomerExperience() {
@@ -624,6 +649,7 @@ function CustomerExperience() {
       </PageHero>
 
       <section className="bg-white py-24">
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
           <SectionHeading
@@ -645,9 +671,11 @@ function CustomerExperience() {
           </div>
 
         </div>
+
       </section>
 
       <section className="bg-slate-950 py-24">
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
           <SectionHeading
@@ -658,13 +686,14 @@ function CustomerExperience() {
           />
 
         </div>
+
       </section>
     </>
   );
 }
 
 /* =========================================================
-   ABOUT
+   ABOUT PAGE
    ========================================================= */
 
 function About() {
@@ -677,14 +706,17 @@ function About() {
       />
 
       <section className="bg-white py-24">
+
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:px-8">
 
           <div>
+
             <SectionHeading
               eyebrow="Our Philosophy"
               title="People Are at the Heart of Service."
               text="Whether someone walks into a restaurant, attends an event, checks into a hotel or interacts with a customer-facing business, the people they encounter shape the experience."
             />
+
           </div>
 
           <div className="space-y-6 text-lg leading-8 text-slate-600">
@@ -709,9 +741,11 @@ function About() {
           </div>
 
         </div>
+
       </section>
 
       <section className="bg-slate-950 py-24">
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
           <div className="grid gap-8 md:grid-cols-3">
@@ -737,13 +771,14 @@ function About() {
           </div>
 
         </div>
+
       </section>
     </>
   );
 }
 
 /* =========================================================
-   FAQ
+   FAQ PAGE
    ========================================================= */
 
 function FAQ() {
@@ -789,6 +824,7 @@ function FAQ() {
       />
 
       <section className="bg-white py-24">
+
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
 
           <div className="space-y-5">
@@ -813,13 +849,14 @@ function FAQ() {
           </div>
 
         </div>
+
       </section>
     </>
   );
 }
 
 /* =========================================================
-   CONTACT
+   CONTACT PAGE
    ========================================================= */
 
 function Contact() {
@@ -832,6 +869,7 @@ function Contact() {
       />
 
       <section className="bg-white py-24">
+
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
 
           <div>
@@ -903,6 +941,7 @@ function Contact() {
           </div>
 
         </div>
+
       </section>
     </>
   );
@@ -1082,7 +1121,7 @@ function Footer() {
                 <img
                   src="/esp-logo-full.png"
                   alt="ESP Exceptional Service Personnel"
-                  className="absolute left-[-25px] top-1/2 h-[145px] w-[235px] -translate-y-1/2 object-contain"
+                  className="absolute left-[-22px] top-1/2 h-[140px] w-[225px] -translate-y-1/2 object-contain"
                 />
 
               </div>
@@ -1199,12 +1238,7 @@ export default function App() {
 
         <Route
           path="/staffing"
-          element={
-            <>
-              <Staffing />
-              <StaffingContent />
-            </>
-          }
+          element={<Staffing />}
         />
 
         <Route
