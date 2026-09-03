@@ -2,6 +2,12 @@ import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 
 /* =========================================================
+   SITE CONTACT INFORMATION
+========================================================= */
+
+const CONTACT_EMAIL = "bericksse@gmail.com";
+
+/* =========================================================
    HEADER
 ========================================================= */
 
@@ -10,9 +16,7 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[124px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
-        {/* =================================================
-            LARGE ESP LOGO
-        ================================================= */}
+        {/* ESP LOGO */}
 
         <Link
           to="/"
@@ -25,9 +29,7 @@ function Header() {
           />
         </Link>
 
-        {/* =================================================
-            DESKTOP NAVIGATION
-        ================================================= */}
+        {/* DESKTOP NAV */}
 
         <nav className="hidden items-center gap-8 lg:flex">
 
@@ -75,9 +77,7 @@ function Header() {
 
         </nav>
 
-        {/* =================================================
-            MOBILE CONTACT
-        ================================================= */}
+        {/* MOBILE */}
 
         <Link
           to="/contact"
@@ -103,6 +103,8 @@ function Footer() {
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
+          {/* BRAND */}
+
           <div>
 
             <Link
@@ -122,6 +124,8 @@ function Footer() {
             </p>
 
           </div>
+
+          {/* SERVICES */}
 
           <div>
 
@@ -156,6 +160,8 @@ function Footer() {
 
           </div>
 
+          {/* COMPANY */}
+
           <div>
 
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
@@ -189,22 +195,27 @@ function Footer() {
 
           </div>
 
+          {/* CONTACT */}
+
           <div>
 
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
-              Service Area
+              Contact
             </h3>
 
-            <p className="text-sm leading-7 text-slate-400">
-              Johannesburg
-              <br />
-              Pretoria
-              <br />
-              Midrand
-              <br />
-              Centurion
-              <br />
-              Greater Gauteng
+            <p className="text-sm font-semibold text-white">
+              Let's talk about your service.
+            </p>
+
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="mt-4 block break-all text-sm text-slate-400 transition hover:text-[#f28c28]"
+            >
+              {CONTACT_EMAIL}
+            </a>
+
+            <p className="mt-6 text-sm leading-7 text-slate-400">
+              Serving businesses and events across Gauteng.
             </p>
 
           </div>
@@ -212,8 +223,23 @@ function Footer() {
         </div>
 
         <div className="mt-14 border-t border-slate-800 pt-8 text-sm text-slate-500">
-          © {new Date().getFullYear()} Exceptional Service Personnel.
-          All rights reserved.
+
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
+            <span>
+              © {new Date().getFullYear()} Exceptional Service Personnel.
+              All rights reserved.
+            </span>
+
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="transition hover:text-[#f28c28]"
+            >
+              {CONTACT_EMAIL}
+            </a>
+
+          </div>
+
         </div>
 
       </div>
@@ -233,9 +259,7 @@ function Home() {
 
       <main>
 
-        {/* =================================================
-            HERO
-        ================================================= */}
+        {/* HERO */}
 
         <section className="relative min-h-[680px] overflow-hidden bg-[#020817]">
 
@@ -316,9 +340,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            TRUST BAR
-        ================================================= */}
+        {/* TRUST BAR */}
 
         <section className="border-b border-slate-200 bg-white">
 
@@ -348,9 +370,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            INTRO
-        ================================================= */}
+        {/* INTRO */}
 
         <section className="bg-white py-24">
 
@@ -411,9 +431,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            SERVICES
-        ================================================= */}
+        {/* SERVICES */}
 
         <section className="bg-slate-50 py-24">
 
@@ -466,9 +484,7 @@ function Home() {
 
         </section>
 
-        {/* =================================================
-            FINAL CTA
-        ================================================= */}
+        {/* FINAL CTA */}
 
         <section className="bg-[#020817] py-24">
 
@@ -493,12 +509,23 @@ function Home() {
               for your business, team or event.
             </p>
 
-            <Link
-              to="/contact"
-              className="mt-9 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
-            >
-              Get in Touch →
-            </Link>
+            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+              <Link
+                to="/contact"
+                className="inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
+              >
+                Get in Touch →
+              </Link>
+
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="inline-flex rounded-full border border-white/20 px-8 py-4 font-bold text-white transition hover:border-[#f28c28] hover:text-[#f28c28]"
+              >
+                Email ESP
+              </a>
+
+            </div>
 
           </div>
 
@@ -1002,7 +1029,7 @@ function FAQ() {
 
             <FAQItem
               question="How do I enquire about your services?"
-              answer="Use the contact page to tell us about your staffing, training or customer-experience requirements."
+              answer={`Email ESP directly at ${CONTACT_EMAIL} or use the contact page to tell us about your staffing, training or customer-experience requirements.`}
             />
 
           </div>
@@ -1037,42 +1064,119 @@ function Contact() {
 
           <div className="grid gap-16 lg:grid-cols-2">
 
+            {/* CONTACT INFORMATION */}
+
             <div>
 
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
-                Start a Conversation
+                Contact ESP
               </p>
 
               <h2 className="mt-4 text-4xl font-black text-[#020817]">
-                Tell us what you need.
+                Let's start a conversation.
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                Give us a little information about your business, event,
-                staffing requirement or training needs and we can discuss the
-                best way forward.
+                Tell us about your business, your team, your event or the
+                service challenge you're trying to solve.
               </p>
 
-              <div className="mt-10 border-l-4 border-[#f28c28] bg-slate-50 p-6">
+              {/* EMAIL CARD */}
+
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="group mt-10 block border border-slate-200 bg-slate-50 p-7 transition hover:-translate-y-1 hover:border-[#f28c28]/50 hover:shadow-lg"
+              >
+
+                <div className="flex items-start gap-5">
+
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f28c28]/10 text-xl text-[#f28c28]">
+                    @
+                  </div>
+
+                  <div>
+
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#f28c28]">
+                      Email
+                    </p>
+
+                    <p className="mt-2 break-all text-lg font-black text-[#020817] transition group-hover:text-[#f28c28]">
+                      {CONTACT_EMAIL}
+                    </p>
+
+                    <p className="mt-2 text-sm text-slate-500">
+                      Click to email ESP
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </a>
+
+              {/* SERVICE AREA */}
+
+              <div className="mt-6 border border-slate-200 bg-white p-7">
+
+                <div className="flex items-start gap-5">
+
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#020817] text-xl text-white">
+                    +
+                  </div>
+
+                  <div>
+
+                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#f28c28]">
+                      Service Area
+                    </p>
+
+                    <p className="mt-2 text-lg font-black text-[#020817]">
+                      Gauteng
+                    </p>
+
+                    <p className="mt-2 text-sm leading-6 text-slate-500">
+                      Johannesburg · Pretoria · Midrand · Centurion · Greater Gauteng
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              {/* RESPONSE MESSAGE */}
+
+              <div className="mt-8 border-l-4 border-[#f28c28] bg-slate-50 p-6">
 
                 <p className="font-bold text-[#020817]">
-                  Serving businesses across Gauteng
+                  Looking for exceptional service?
                 </p>
 
-                <p className="mt-2 text-slate-600">
-                  Johannesburg · Pretoria · Midrand · Centurion · Greater Gauteng
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Contact us and let's discuss how ESP can support your
+                  staffing, training or customer-experience requirements.
                 </p>
 
               </div>
 
             </div>
 
+            {/* FORM */}
+
             <form
               className="border border-slate-200 bg-slate-50 p-8"
               onSubmit={(e) => e.preventDefault()}
             >
 
-              <div className="grid gap-5">
+              <h3 className="text-2xl font-black text-[#020817]">
+                Send an enquiry
+              </h3>
+
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                Complete the form below and we'll discuss your requirements.
+              </p>
+
+              <div className="mt-7 grid gap-5">
 
                 <FormField
                   label="Name"
@@ -1140,6 +1244,16 @@ function Contact() {
                 >
                   Send Enquiry →
                 </button>
+
+                <p className="text-center text-xs text-slate-500">
+                  Prefer email?{" "}
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="font-semibold text-[#f28c28] hover:underline"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
+                </p>
 
               </div>
 
@@ -1347,12 +1461,27 @@ function CTA({
           {text}
         </p>
 
-        <Link
-          to="/contact"
-          className="mt-8 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
-        >
-          {button} →
-        </Link>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+          <Link
+            to="/contact"
+            className="inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
+          >
+            {button} →
+          </Link>
+
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className={`inline-flex rounded-full border px-8 py-4 font-bold transition ${
+              dark
+                ? "border-white/20 text-white hover:border-[#f28c28] hover:text-[#f28c28]"
+                : "border-slate-300 text-[#020817] hover:border-[#f28c28] hover:text-[#f28c28]"
+            }`}
+          >
+            Email ESP
+          </a>
+
+        </div>
 
       </div>
 
