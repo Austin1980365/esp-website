@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 
 /* =========================================================
-   SHARED HEADER
+   HEADER
 ========================================================= */
 
 function Header() {
@@ -10,48 +10,43 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between px-6 lg:px-8">
 
-        {/* ESP MODERN LOGO */}
-        <Link to="/" className="flex h-full items-center">
+        <Link to="/" className="flex items-center">
           <img
-            src="/esp-logo%203%20modern.png"
+            src="/esp%20logo%203%20modern.png"
             alt="ESP Exceptional Service Personnel"
             className="h-[94px] w-[235px] object-contain object-left"
           />
         </Link>
 
-        {/* DESKTOP NAVIGATION */}
         <nav className="hidden items-center gap-8 lg:flex">
-
-          <NavLink to="/staffing">
+          <Link className="text-sm font-semibold text-slate-700 hover:text-[#f28c28]" to="/staffing">
             Staffing
-          </NavLink>
+          </Link>
 
-          <NavLink to="/training">
+          <Link className="text-sm font-semibold text-slate-700 hover:text-[#f28c28]" to="/training">
             Training
-          </NavLink>
+          </Link>
 
-          <NavLink to="/customer-experience">
+          <Link className="text-sm font-semibold text-slate-700 hover:text-[#f28c28]" to="/customer-experience">
             Customer Experience
-          </NavLink>
+          </Link>
 
-          <NavLink to="/about">
+          <Link className="text-sm font-semibold text-slate-700 hover:text-[#f28c28]" to="/about">
             About
-          </NavLink>
+          </Link>
 
-          <NavLink to="/faq">
+          <Link className="text-sm font-semibold text-slate-700 hover:text-[#f28c28]" to="/faq">
             FAQ
-          </NavLink>
+          </Link>
 
           <Link
             to="/contact"
-            className="rounded-full bg-[#f28c28] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#d97516]"
+            className="rounded-full bg-[#f28c28] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#d97516]"
           >
             Get in Touch
           </Link>
-
         </nav>
 
-        {/* MOBILE CTA */}
         <Link
           to="/contact"
           className="rounded-full bg-[#f28c28] px-5 py-2.5 text-sm font-bold text-white lg:hidden"
@@ -61,17 +56,6 @@ function Header() {
 
       </div>
     </header>
-  );
-}
-
-function NavLink({ to, children }) {
-  return (
-    <Link
-      to={to}
-      className="text-sm font-semibold text-slate-700 transition hover:text-[#f28c28]"
-    >
-      {children}
-    </Link>
   );
 }
 
@@ -87,14 +71,12 @@ function Footer() {
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
-          {/* BRAND */}
           <div>
-
             <Link to="/" className="inline-block">
               <img
-                src="/esp-logo%203%20modern.png"
+                src="/esp%20logo%203%20modern.png"
                 alt="ESP Exceptional Service Personnel"
-                className="h-[100px] w-[245px] object-contain object-left"
+                className="h-[105px] w-[250px] object-contain object-left"
               />
             </Link>
 
@@ -102,80 +84,49 @@ function Footer() {
               Professional hospitality staffing, practical training and
               customer experience solutions built around exceptional service.
             </p>
-
           </div>
 
-          {/* SERVICES */}
           <div>
-
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Services
             </h3>
 
             <div className="space-y-3 text-sm text-slate-400">
-
-              <Link
-                to="/staffing"
-                className="block transition hover:text-white"
-              >
+              <Link className="block hover:text-white" to="/staffing">
                 Hospitality Staffing
               </Link>
 
-              <Link
-                to="/training"
-                className="block transition hover:text-white"
-              >
+              <Link className="block hover:text-white" to="/training">
                 Staff Training
               </Link>
 
-              <Link
-                to="/customer-experience"
-                className="block transition hover:text-white"
-              >
+              <Link className="block hover:text-white" to="/customer-experience">
                 Customer Experience
               </Link>
-
             </div>
-
           </div>
 
-          {/* COMPANY */}
           <div>
-
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Company
             </h3>
 
             <div className="space-y-3 text-sm text-slate-400">
-
-              <Link
-                to="/about"
-                className="block transition hover:text-white"
-              >
+              <Link className="block hover:text-white" to="/about">
                 About ESP
               </Link>
 
-              <Link
-                to="/faq"
-                className="block transition hover:text-white"
-              >
+              <Link className="block hover:text-white" to="/faq">
                 FAQ
               </Link>
 
-              <Link
-                to="/contact"
-                className="block transition hover:text-white"
-              >
+              <Link className="block hover:text-white" to="/contact">
                 Contact
               </Link>
-
             </div>
-
           </div>
 
-          {/* SERVICE AREA */}
           <div>
-
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#f28c28]">
               Service Area
             </h3>
@@ -191,26 +142,22 @@ function Footer() {
               <br />
               Greater Gauteng
             </p>
-
           </div>
 
         </div>
 
         <div className="mt-14 border-t border-slate-800 pt-8 text-sm text-slate-500">
-          <p>
-            © {new Date().getFullYear()} Exceptional Service Personnel.
-            All rights reserved.
-          </p>
+          © {new Date().getFullYear()} Exceptional Service Personnel.
+          All rights reserved.
         </div>
 
       </div>
-
     </footer>
   );
 }
 
 /* =========================================================
-   HOME PAGE
+   HOME
 ========================================================= */
 
 function Home() {
@@ -220,13 +167,8 @@ function Home() {
 
       <main>
 
-        {/* =================================================
-            HERO
-        ================================================= */}
-
         <section className="relative min-h-[680px] overflow-hidden bg-[#020817]">
 
-          {/* HERO PHOTOGRAPH */}
           <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
 
             <img
@@ -235,24 +177,19 @@ function Home() {
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
-            {/* DARK LEFT BLEND FOR TEXT READABILITY */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/90 via-[#020817]/35 via-25% to-transparent" />
 
           </div>
 
-          {/* HERO CONTENT */}
           <div className="relative z-10 mx-auto flex min-h-[680px] max-w-7xl items-center px-6 py-20 lg:px-8">
 
             <div className="max-w-2xl">
 
-              {/* EYEBROW */}
-              <div className="mb-6 inline-flex items-center rounded-full border border-[#f28c28]/40 bg-[#f28c28]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f28c28]">
+              <div className="mb-6 inline-flex rounded-full border border-[#f28c28]/40 bg-[#f28c28]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f28c28]">
                 Five-Star Customer Experience
               </div>
 
-              {/* HEADLINE */}
               <h1 className="text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
-
                 Exceptional
 
                 <span className="block">
@@ -270,17 +207,14 @@ function Home() {
                 <span className="block text-[#f28c28]">
                   People.
                 </span>
-
               </h1>
 
-              {/* INTRO */}
               <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
                 Professional hospitality staffing, practical training and
                 customer experience solutions for businesses and events
                 across Gauteng.
               </p>
 
-              {/* CTA BUTTONS */}
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
 
                 <Link
@@ -288,11 +222,7 @@ function Home() {
                   className="inline-flex items-center justify-center rounded-full bg-[#f28c28] px-7 py-4 text-sm font-bold text-white shadow-lg transition hover:bg-[#d97516]"
                 >
                   Hire Hospitality Staff
-
-                  <span className="ml-3 text-lg">
-                    →
-                  </span>
-
+                  <span className="ml-3 text-lg">→</span>
                 </Link>
 
                 <Link
@@ -305,46 +235,25 @@ function Home() {
               </div>
 
             </div>
-
           </div>
-
         </section>
 
-        {/* =================================================
-            TRUST BAR
-        ================================================= */}
+        {/* TRUST BAR */}
 
         <section className="border-b border-slate-200 bg-white">
 
           <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 lg:grid-cols-4">
 
-            <TrustItem
-              number="2007"
-              label="Established"
-            />
-
-            <TrustItem
-              number="250+"
-              label="Trained Personnel"
-            />
-
-            <TrustItem
-              number="Gauteng"
-              label="Service Area"
-            />
-
-            <TrustItem
-              number="5-Star"
-              label="Service Focus"
-            />
+            <TrustItem number="2007" label="Established" />
+            <TrustItem number="250+" label="Trained Personnel" />
+            <TrustItem number="Gauteng" label="Service Area" />
+            <TrustItem number="5-Star" label="Service Focus" />
 
           </div>
 
         </section>
 
-        {/* =================================================
-            INTRODUCTION
-        ================================================= */}
+        {/* INTRO */}
 
         <section className="bg-white py-24">
 
@@ -359,13 +268,11 @@ function Home() {
                 </p>
 
                 <h2 className="text-4xl font-black tracking-tight text-[#020817] sm:text-5xl">
-
                   Service is not just what your customers receive.
 
                   <span className="block text-[#f28c28]">
                     It is how they remember you.
                   </span>
-
                 </h2>
 
               </div>
@@ -387,27 +294,19 @@ function Home() {
 
                 <Link
                   to="/customer-experience"
-                  className="mt-8 inline-flex items-center font-bold text-[#020817] transition hover:text-[#f28c28]"
+                  className="mt-8 inline-flex font-bold text-[#020817] hover:text-[#f28c28]"
                 >
                   Explore Customer Experience
-
-                  <span className="ml-3 text-[#f28c28]">
-                    →
-                  </span>
-
+                  <span className="ml-3 text-[#f28c28]">→</span>
                 </Link>
 
               </div>
 
             </div>
-
           </div>
-
         </section>
 
-        {/* =================================================
-            SERVICES
-        ================================================= */}
+        {/* SERVICES */}
 
         <section className="bg-slate-50 py-24">
 
@@ -419,7 +318,7 @@ function Home() {
                 What We Do
               </p>
 
-              <h2 className="text-4xl font-black tracking-tight text-[#020817] sm:text-5xl">
+              <h2 className="text-4xl font-black text-[#020817] sm:text-5xl">
                 Practical solutions for better service.
               </h2>
 
@@ -457,12 +356,9 @@ function Home() {
             </div>
 
           </div>
-
         </section>
 
-        {/* =================================================
-            FINAL CTA
-        ================================================= */}
+        {/* CTA */}
 
         <section className="bg-[#020817] py-24">
 
@@ -472,14 +368,12 @@ function Home() {
               Ready to Improve Your Service?
             </p>
 
-            <h2 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
-
+            <h2 className="mt-5 text-4xl font-black text-white sm:text-5xl">
               Let's create a customer experience
 
               <span className="block text-[#f28c28]">
                 your business can be proud of.
               </span>
-
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400">
@@ -489,18 +383,12 @@ function Home() {
 
             <Link
               to="/contact"
-              className="mt-9 inline-flex rounded-full bg-[#f28c28] px-8 py-4 text-sm font-bold text-white transition hover:bg-[#d97516]"
+              className="mt-9 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white hover:bg-[#d97516]"
             >
-              Get in Touch
-
-              <span className="ml-3">
-                →
-              </span>
-
+              Get in Touch →
             </Link>
 
           </div>
-
         </section>
 
       </main>
@@ -517,7 +405,6 @@ function Home() {
 function TrustItem({ number, label }) {
   return (
     <div className="px-5 py-8 text-center sm:px-8">
-
       <div className="text-2xl font-black text-[#020817]">
         {number}
       </div>
@@ -525,7 +412,6 @@ function TrustItem({ number, label }) {
       <div className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-500">
         {label}
       </div>
-
     </div>
   );
 }
@@ -534,18 +420,12 @@ function TrustItem({ number, label }) {
    SERVICE CARD
 ========================================================= */
 
-function ServiceCard({
-  number,
-  title,
-  text,
-  link,
-}) {
+function ServiceCard({ number, title, text, link }) {
   return (
     <Link
       to={link}
       className="group border border-slate-200 bg-white p-8 transition hover:-translate-y-1 hover:border-[#f28c28]/40 hover:shadow-xl"
     >
-
       <div className="text-sm font-black text-[#f28c28]">
         {number}
       </div>
@@ -561,13 +441,42 @@ function ServiceCard({
       <div className="mt-8 font-bold text-[#020817] group-hover:text-[#f28c28]">
         Learn More →
       </div>
-
     </Link>
   );
 }
 
 /* =========================================================
-   STAFFING PAGE
+   PAGE HERO
+========================================================= */
+
+function PageHero({ eyebrow, title, text }) {
+  return (
+    <section className="bg-[#020817] py-24">
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div className="max-w-4xl">
+
+          <div className="inline-flex rounded-full border border-[#f28c28]/40 bg-[#f28c28]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f28c28]">
+            {eyebrow}
+          </div>
+
+          <h1 className="mt-7 text-5xl font-black leading-tight tracking-tight text-white sm:text-6xl">
+            {title}
+          </h1>
+
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+            {text}
+          </p>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================
+   STAFFING
 ========================================================= */
 
 function Staffing() {
@@ -642,29 +551,11 @@ function Staffing() {
 
         </section>
 
-        <section className="bg-slate-50 py-24">
-
-          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-
-            <h2 className="text-4xl font-black text-[#020817]">
-              Need hospitality staff?
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Tell us about your requirements and we'll discuss how ESP can
-              support your operation or event.
-            </p>
-
-            <Link
-              to="/contact"
-              className="mt-8 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
-            >
-              Request Staff →
-            </Link>
-
-          </div>
-
-        </section>
+        <CTA
+          title="Need hospitality staff?"
+          text="Tell us about your requirements and we'll discuss how ESP can support your operation or event."
+          button="Request Staff"
+        />
 
       </main>
 
@@ -674,32 +565,7 @@ function Staffing() {
 }
 
 /* =========================================================
-   FEATURE CARD
-========================================================= */
-
-function FeatureCard({
-  title,
-  text,
-}) {
-  return (
-    <div className="border border-slate-200 bg-white p-8">
-
-      <div className="mb-5 h-1 w-12 bg-[#f28c28]" />
-
-      <h3 className="text-xl font-black text-[#020817]">
-        {title}
-      </h3>
-
-      <p className="mt-4 leading-7 text-slate-600">
-        {text}
-      </p>
-
-    </div>
-  );
-}
-
-/* =========================================================
-   TRAINING PAGE
+   TRAINING
 ========================================================= */
 
 function Training() {
@@ -769,57 +635,17 @@ function Training() {
 
         </section>
 
-        <section className="bg-[#020817] py-24">
-
-          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-
-            <h2 className="text-4xl font-black text-white">
-              Give your team the tools to deliver better service.
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-slate-400">
-              Training can be adapted to your business, your team and the
-              specific service challenges you are experiencing.
-            </p>
-
-            <Link
-              to="/contact"
-              className="mt-8 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
-            >
-              Discuss Training →
-            </Link>
-
-          </div>
-
-        </section>
+        <CTA
+          title="Give your team the tools to deliver better service."
+          text="Training can be adapted to your business, your team and the specific service challenges you are experiencing."
+          button="Discuss Training"
+          dark
+        />
 
       </main>
 
       <Footer />
     </>
-  );
-}
-
-/* =========================================================
-   TRAINING ITEM
-========================================================= */
-
-function TrainingItem({
-  title,
-  text,
-}) {
-  return (
-    <div className="border-l-4 border-[#f28c28] bg-slate-50 p-6">
-
-      <h3 className="font-black text-[#020817]">
-        {title}
-      </h3>
-
-      <p className="mt-2 leading-7 text-slate-600">
-        {text}
-      </p>
-
-    </div>
   );
 }
 
@@ -888,62 +714,16 @@ function CustomerExperience() {
 
         </section>
 
-        <section className="bg-slate-50 py-24">
-
-          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-
-            <h2 className="text-4xl font-black text-[#020817]">
-              What does your customer experience feel like?
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              Let's look at where your service is today and where it could
-              be tomorrow.
-            </p>
-
-            <Link
-              to="/contact"
-              className="mt-8 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
-            >
-              Start a Conversation →
-            </Link>
-
-          </div>
-
-        </section>
+        <CTA
+          title="What does your customer experience feel like?"
+          text="Let's look at where your service is today and where it could be tomorrow."
+          button="Start a Conversation"
+        />
 
       </main>
 
       <Footer />
     </>
-  );
-}
-
-/* =========================================================
-   EXPERIENCE CARD
-========================================================= */
-
-function ExperienceCard({
-  number,
-  title,
-  text,
-}) {
-  return (
-    <div className="border border-slate-200 bg-white p-8">
-
-      <div className="text-sm font-black text-[#f28c28]">
-        {number}
-      </div>
-
-      <h3 className="mt-8 text-2xl font-black text-[#020817]">
-        {title}
-      </h3>
-
-      <p className="mt-4 leading-7 text-slate-600">
-        {text}
-      </p>
-
-    </div>
   );
 }
 
@@ -1044,31 +824,6 @@ function About() {
 }
 
 /* =========================================================
-   VALUE CARD
-========================================================= */
-
-function ValueCard({
-  title,
-  text,
-}) {
-  return (
-    <div className="bg-white p-8">
-
-      <div className="mb-6 h-1 w-12 bg-[#f28c28]" />
-
-      <h3 className="text-2xl font-black text-[#020817]">
-        {title}
-      </h3>
-
-      <p className="mt-4 leading-7 text-slate-600">
-        {text}
-      </p>
-
-    </div>
-  );
-}
-
-/* =========================================================
    FAQ
 ========================================================= */
 
@@ -1131,29 +886,6 @@ function FAQ() {
 }
 
 /* =========================================================
-   FAQ ITEM
-========================================================= */
-
-function FAQItem({
-  question,
-  answer,
-}) {
-  return (
-    <div className="border border-slate-200 p-7">
-
-      <h3 className="text-lg font-black text-[#020817]">
-        {question}
-      </h3>
-
-      <p className="mt-3 leading-7 text-slate-600">
-        {answer}
-      </p>
-
-    </div>
-  );
-}
-
-/* =========================================================
    CONTACT
 ========================================================= */
 
@@ -1174,7 +906,6 @@ function Contact() {
 
           <div className="grid gap-16 lg:grid-cols-2">
 
-            {/* CONTACT INTRO */}
             <div>
 
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f28c28]">
@@ -1198,15 +929,13 @@ function Contact() {
                 </p>
 
                 <p className="mt-2 text-slate-600">
-                  Johannesburg · Pretoria · Midrand · Centurion · Greater
-                  Gauteng
+                  Johannesburg · Pretoria · Midrand · Centurion · Greater Gauteng
                 </p>
 
               </div>
 
             </div>
 
-            {/* CONTACT FORM */}
             <form
               className="border border-slate-200 bg-slate-50 p-8"
               onSubmit={(e) => e.preventDefault()}
@@ -1214,47 +943,23 @@ function Contact() {
 
               <div className="grid gap-5">
 
-                <div>
+                <FormField
+                  label="Name"
+                  type="text"
+                  placeholder="Your name"
+                />
 
-                  <label className="mb-2 block text-sm font-bold text-[#020817]">
-                    Name
-                  </label>
+                <FormField
+                  label="Business"
+                  type="text"
+                  placeholder="Business name"
+                />
 
-                  <input
-                    type="text"
-                    className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
-                    placeholder="Your name"
-                  />
-
-                </div>
-
-                <div>
-
-                  <label className="mb-2 block text-sm font-bold text-[#020817]">
-                    Business
-                  </label>
-
-                  <input
-                    type="text"
-                    className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
-                    placeholder="Business name"
-                  />
-
-                </div>
-
-                <div>
-
-                  <label className="mb-2 block text-sm font-bold text-[#020817]">
-                    Email
-                  </label>
-
-                  <input
-                    type="email"
-                    className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
-                    placeholder="Email address"
-                  />
-
-                </div>
+                <FormField
+                  label="Email"
+                  type="email"
+                  placeholder="Email address"
+                />
 
                 <div>
 
@@ -1262,23 +967,12 @@ function Contact() {
                     What can we help with?
                   </label>
 
-                  <select className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]">
+                  <select className="w-full border border-slate-300 bg-white px-4 py-3 outline-none focus:border-[#f28c28]">
 
-                    <option>
-                      Hospitality Staffing
-                    </option>
-
-                    <option>
-                      Team Training
-                    </option>
-
-                    <option>
-                      Customer Experience
-                    </option>
-
-                    <option>
-                      Other
-                    </option>
+                    <option>Hospitality Staffing</option>
+                    <option>Team Training</option>
+                    <option>Customer Experience</option>
+                    <option>Other</option>
 
                   </select>
 
@@ -1292,7 +986,7 @@ function Contact() {
 
                   <textarea
                     rows="5"
-                    className="w-full border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-[#f28c28]"
+                    className="w-full border border-slate-300 bg-white px-4 py-3 outline-none focus:border-[#f28c28]"
                     placeholder="Tell us about your requirements..."
                   />
 
@@ -1321,34 +1015,143 @@ function Contact() {
 }
 
 /* =========================================================
-   PAGE HERO
+   SMALL COMPONENTS
 ========================================================= */
 
-function PageHero({
-  eyebrow,
-  title,
-  text,
-}) {
+function FeatureCard({ title, text }) {
   return (
-    <section className="bg-[#020817] py-24">
+    <div className="border border-slate-200 bg-white p-8">
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mb-5 h-1 w-12 bg-[#f28c28]" />
 
-        <div className="max-w-4xl">
+      <h3 className="text-xl font-black text-[#020817]">
+        {title}
+      </h3>
 
-          <div className="inline-flex rounded-full border border-[#f28c28]/40 bg-[#f28c28]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f28c28]">
-            {eyebrow}
-          </div>
+      <p className="mt-4 leading-7 text-slate-600">
+        {text}
+      </p>
 
-          <h1 className="mt-7 text-5xl font-black leading-tight tracking-tight text-white sm:text-6xl">
-            {title}
-          </h1>
+    </div>
+  );
+}
 
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
-            {text}
-          </p>
+function TrainingItem({ title, text }) {
+  return (
+    <div className="border-l-4 border-[#f28c28] bg-slate-50 p-6">
 
-        </div>
+      <h3 className="font-black text-[#020817]">
+        {title}
+      </h3>
+
+      <p className="mt-2 leading-7 text-slate-600">
+        {text}
+      </p>
+
+    </div>
+  );
+}
+
+function ExperienceCard({ number, title, text }) {
+  return (
+    <div className="border border-slate-200 bg-white p-8">
+
+      <div className="text-sm font-black text-[#f28c28]">
+        {number}
+      </div>
+
+      <h3 className="mt-8 text-2xl font-black text-[#020817]">
+        {title}
+      </h3>
+
+      <p className="mt-4 leading-7 text-slate-600">
+        {text}
+      </p>
+
+    </div>
+  );
+}
+
+function ValueCard({ title, text }) {
+  return (
+    <div className="bg-white p-8">
+
+      <div className="mb-6 h-1 w-12 bg-[#f28c28]" />
+
+      <h3 className="text-2xl font-black text-[#020817]">
+        {title}
+      </h3>
+
+      <p className="mt-4 leading-7 text-slate-600">
+        {text}
+      </p>
+
+    </div>
+  );
+}
+
+function FAQItem({ question, answer }) {
+  return (
+    <div className="border border-slate-200 p-7">
+
+      <h3 className="text-lg font-black text-[#020817]">
+        {question}
+      </h3>
+
+      <p className="mt-3 leading-7 text-slate-600">
+        {answer}
+      </p>
+
+    </div>
+  );
+}
+
+function FormField({ label, type, placeholder }) {
+  return (
+    <div>
+
+      <label className="mb-2 block text-sm font-bold text-[#020817]">
+        {label}
+      </label>
+
+      <input
+        type={type}
+        placeholder={placeholder}
+        className="w-full border border-slate-300 bg-white px-4 py-3 outline-none focus:border-[#f28c28]"
+      />
+
+    </div>
+  );
+}
+
+function CTA({ title, text, button, dark = false }) {
+  return (
+    <section className={dark ? "bg-[#020817] py-24" : "bg-slate-50 py-24"}>
+
+      <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+
+        <h2
+          className={`text-4xl font-black ${
+            dark ? "text-white" : "text-[#020817]"
+          }`}
+        >
+          {title}
+        </h2>
+
+        <p
+          className={`mt-6 text-lg leading-8 ${
+            dark ? "text-slate-400" : "text-slate-600"
+          }`}
+        >
+          {text}
+        </p>
+
+        <Link
+          to="/contact"
+          className="mt-8 inline-flex rounded-full bg-[#f28c28] px-8 py-4 font-bold text-white transition hover:bg-[#d97516]"
+        >
+          {button} →
+        </Link>
 
       </div>
 
@@ -1357,7 +1160,7 @@ function PageHero({
 }
 
 /* =========================================================
-   404 PAGE
+   404
 ========================================================= */
 
 function NotFound() {
@@ -1383,7 +1186,7 @@ function NotFound() {
 
           <Link
             to="/"
-            className="mt-8 inline-flex rounded-full bg-[#f28c28] px-7 py-4 font-bold text-white transition hover:bg-[#d97516]"
+            className="mt-8 inline-flex rounded-full bg-[#f28c28] px-7 py-4 font-bold text-white hover:bg-[#d97516]"
           >
             Back to Home →
           </Link>
@@ -1405,45 +1208,24 @@ export default function App() {
   return (
     <Routes>
 
-      <Route
-        path="/"
-        element={<Home />}
-      />
+      <Route path="/" element={<Home />} />
 
-      <Route
-        path="/staffing"
-        element={<Staffing />}
-      />
+      <Route path="/staffing" element={<Staffing />} />
 
-      <Route
-        path="/training"
-        element={<Training />}
-      />
+      <Route path="/training" element={<Training />} />
 
       <Route
         path="/customer-experience"
         element={<CustomerExperience />}
       />
 
-      <Route
-        path="/about"
-        element={<About />}
-      />
+      <Route path="/about" element={<About />} />
 
-      <Route
-        path="/faq"
-        element={<FAQ />}
-      />
+      <Route path="/faq" element={<FAQ />} />
 
-      <Route
-        path="/contact"
-        element={<Contact />}
-      />
+      <Route path="/contact" element={<Contact />} />
 
-      <Route
-        path="*"
-        element={<NotFound />}
-      />
+      <Route path="*" element={<NotFound />} />
 
     </Routes>
   );
